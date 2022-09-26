@@ -822,6 +822,9 @@ main {
     height: 100%;
     color: #fff;
 }
+.extra-button button a:focus {
+    outline: none;
+}
 .title {
 	font-size: 2.5rem;
 	color: black;
