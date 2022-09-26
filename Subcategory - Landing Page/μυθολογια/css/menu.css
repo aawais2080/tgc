@@ -27,7 +27,9 @@ a:focus {
 a:focus {
 	outline: 2px solid var(--color-focus);
 }
-
+.extra-button button a:focus {
+    outline: none;
+}
 
 .frame {
 	position: absolute;
