@@ -357,7 +357,9 @@ main {
     stroke-width: 1px;
     will-change: transform, opacity
 }
-
+.item__enter-circle circle{
+    r: 100;
+}
 .item__excerpt {
     line-height: 1.2;
     will-change: transform
