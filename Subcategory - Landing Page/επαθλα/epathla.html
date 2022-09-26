@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Έπαθλα
+    </title>
+    <meta name="description"
+        content="An experimental page transition concept for magazines and blogs where an item opens for a full page view.">
+    <meta name="keywords" content="page transition, preview, layout, animation, gsap, magazine, magnetic hover">
+    <meta name="author" content="Codrops">
+    <link rel="icon shortcut" href="favicon.9103058f.ico">
+    <link rel="stylesheet" href="https://use.typekit.net/ytb6dpl.css">
+    <link rel="stylesheet" href="https://use.typekit.net/phg5cnq.css">
+
+    <link rel="stylesheet" href="magneticButton.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" type="text/css" href="../menu.css" />
+    <link rel="stylesheet" type="text/css" href="index.df8e917f.css">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/EB+Garamond">
+    <link rel="stylesheet" href="../general.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js">
+    </script>
+    <script>!function () { document.documentElement.className = "js"; var e, t; (t = document.createElement("style")).innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e || alert("Please view this demo in a modern browser that supports CSS Variables.") }();
+    </script>
+    <script>
+        jQuery(document).ready(function(){
+            jQuery('.preview__item-button').each(function(){
+                var getUrl = window.location;
+                // var getUrl = window.location.href;
+                var baseUrl = getUrl.origin;
+                var hreff = jQuery(this).attr('href')
+                jQuery(this).attr("href", baseUrl+hreff)
+            })
+        })
+    </script>
+</head>
+
+<body class="body pt-page">
+    <!--<button class="locationButton" onclick="navigationHandler()"> click me </button>-->
+    <main class="mainPage">
+        <div class="frameMenu">
+		<!--	<div class="frame__navMenu">
+				<label class="main-nav-open nav-toggle" for="main-nav-toggle" tabindex="0" aria-label="Menu">
+					<svg aria-hidden="true" width="28px" height="20px" viewBox="0 0 28 20">
+						<rect x="0" y="2" width="28" height="2"></rect>
+						<rect x="0" y="10" width="24" height="2"></rect>
+						<rect x="0" y="18" width="28" height="2"></rect>
+					</svg>
+				</label>
+				<input type="checkbox" id="main-nav-toggle" />
+				<nav class="main-nav">
+                    <ul class="main-nav__fallback">
+						<li>
+							<a class="preview__item-button" href="/subcategory%20-%20landing%20page/Απαρχές/aπαρχές.html">Απαρχές </a>
+						</li>
+						<li>
+							<a class="preview__item-button" href="/subcategory%20-%20landing%20page/Mythologia/mythologia.html">Μυθολογία </a>
+						</li>
+						<li>
+							<a class="preview__item-button" href="/subcategory%20-%20landing%20page/Ιδεώδη/Ιδεώδη.html">Ιδεώδη</a>
+						</li>
+						<li>
+							<a class="preview__item-button" href="/subcategory%20-%20landing%20page/Αγωνίσματα/Αγωνίσματα.html">Αγωνίσματα</a>
+						</li>
+						<li>
+							<a class="preview__item-button" href="/subcategory%20-%20landing%20page/Texnologia/texnologia.html">Τεχνολογία</a>
+						</li>
+						<li>
+							<a class="preview__item-button" href="/subcategory%20-%20landing%20page/Επαθλα/Επαθλα.html">Επαθλα</a>
+						</li>
+					</ul>
+					<label class="main-nav__close nav-toggle" for="main-nav-toggle" tabindex="0" aria-label="Close menu">
+						<svg aria-hidden="true" width="24" height="22px" viewBox="0 0 24 22">
+							<path d="M11 9.586L20.192.393l1.415 1.415L12.414 11l9.193 9.192-1.415 1.415L11 12.414l-9.192 9.193-1.415-1.415L9.586 11 .393 1.808 1.808.393 11 9.586z">
+						</svg>
+					</label>
+				</nav>
+			</div>  -->
+		</div>
+        <div class="extra-button">
+            <button>
+		      <a href="https://museumdemo13.netlify.app/"> Home </a>
+            </button> 
+        </div> 
+        <div class="content-button gsap-landing">
+            <button class="button" onclick="previousClickHandler()">
+                <div class="button__deco">
+                    <div class="button__deco-filler"></div>
+                </div>
+                <span class="button__text">
+                    <span class="button__text-inner">Previous</span>
+                </span>
+            </button>
+        </div>
+        <div class="frame">
+            <div class="frame__title-wrap">
+                <h1 class="frame__title gsap-landing">Έπαθλα
+                </h1>
+               <!-- <p class="frame__tagline gsap-landing">Οι απαρχές των αθλητικών αγώνων απηχούν τον καθημερινό αγώνα επιβίωσης των ανθρώπων, την αγωνιώδη προσπάθεια για την εξασφάλιση της τροφής, την προστασία από τους κινδύνους της φύσης, την αναμέτρηση με άγρια ζώα κι επικίνδυνους αντιπάλους.
+Στη μακραίωνη προϊστορία τους, οι αγώνες συνδέθηκαν με τελετουργίες για την εξασφάλιση της εύνοιας των θεών και της γονιμότητας της γης –η συνήθεια της στέψης των νικητών με δροσερούς βλαστούς ανάγεται σε αυτές τις γιορτές.
+                </p>  -->
+            </div>
+            <nav class="frame__links"> <a href=""></a> <a href=""></a> <a href=""></a> </nav>
+        </div>
+        <section class="items">
+            <article class="item" style="margin-bottom:-100px">
+                <div class="item__imgwrap">
+                    <div class="item__img gsap-landing" style="background-image:url(Μικρογραφικός_αναθηματικός_τριποδικός_λέβητας.png)">
+                    </div>
+                </div>
+                </div>
+                <!-- <div class="wrapper item__imgwrap gsap-landing"></div> -->
+                <button class="item__enter unbutton gsap-landing">
+                    <svg class="item__enter-circle" vector-effect="non-scaling-stroke" width="800" height="800">
+                        <circle vector-effect="non-scaling-stroke" cx="400" cy="400" r="150" />
+                    </svg>
+                </button>
+                <h2 class="heading heading--item gsap-landing">
+                    <span data-splitting="" style="font-size:35px!important;">Μικρογραφικός αναθηματικός τριποδικός λέβητας 
+                    </span>
+                </h2>
+                   <div class="item__meta">
+                    <span class="item__meta-row gsap-landing">
+                      <!--  <span style="text-transform:none;">Αρχαιολογικό Μουσείο Ηρακλείου
+                        </span>  -->
+                    </span> 
+                    <span class="item__meta-row gsap-landing">
+                     <!--  <span style="text-transform:none;">Χρονολογία: ΥΜ Ι (1600 -1450 π.Χ.)
+                        </span>  -->
+                    </span>
+                </div>
+                <div class="item__excerpt gsap-landing">
+                     <!--   <p>
+                        Κωνικό, σπονδικό σκεύος με ανάγλυφες παραστάσεις σε τέσσερις ζώνες, όπου απεικονίζονται ζεύγη
+                        πυγμάχων, σε δύο διακριτά είδη πυγμαχίας, κρίνοντας από τα διαφορετικά κράνη (κράνη με ή χωρίς
+                        λοφίο και παραγναθίδες), οι οποίοι φορούν γάντια και ειδικά υποδήματα, ζεύγη παλαιστών και άλτες
+                        ταύρων (διακρίνεται το ατυχές άλμα ενός αθλητή κατά την υπερπήδηση του ταύρου).
+                    </p>  -->
+                       <a class="item__excerpt-link gsap-landing" href="#content-1">
+                        <span style=" margin-top: -50px;" >Read more
+                        </span> 
+                    </a>  
+                </div> 
+            </article>
+            <article class="item item--invert" style="margin-bottom:-100px">
+                <div class="item__imgwrap gsap-landing">
+                    <div class="item__img" style="background-image:url(Τριποδικός_σφυρήλατος_τρίποδας.png)"></div>
+                </div>
+                <button class="item__enter unbutton gsap-landing">
+                    <svg class="item__enter-circle" vector-effect="non-scaling-stroke" width="800" height="800">
+                        <circle vector-effect="non-scaling-stroke" cx="400" cy="400" r="150" />
+                    </svg>
+                </button>
+                <h2 class="heading heading--item gsap-landing">
+                    <span data-splitting="" style="font-size:50px!important;">Τριποδικός σφυρήλατος τρίποδας
+                    </span>
+                </h2>
+                   <div class="item__meta">
+                    <span class="item__meta-row gsap-landing">
+                       <!-- <span style="text-transform:none;">Αρχαιολογικό Μουσείο Ηρακλείου
+                        </span>  -->
+                    </span>
+                  <!--  <span class="item__meta-row gsap-landing" style="text-transform:none;">
+                        <span>Χρονολογία: Όψιμη ΥΜ ΙΒ – ΥΜ ΙΙ (1450 - 1400 π.Χ.)
+                        </span>  -->
+                    </span>
+                </div>
+                <div class="item__excerpt gsap-landing">
+                 <!--   <p>Μία από τις έξι, τουλάχιστον, συνεχόμενες μετόπες, που κοσμούσαν περιμετρικά τους τοίχους ενός
+                        δωματίου, με το ίδιο θέμα των ταυροπαιδιών, δηλαδή των ακροβατικών αλμάτων πάνω από το σώμα
+                        επιτιθέμενων ταύρων.
+                    </p>  -->
+                    <a class="gsap-landing item__excerpt-link" href="#content-2">
+                        <span>Read more
+                        </span>  
+                    </a>  
+                </div> 
+            </article>
+            <article class="item" style="margin-bottom:-200px">
+                <div class="item__imgwrap gsap-landing">
+                    <div class="item__img" style="background-image:url(Αττικός_αμφορέας_με_αντωπά_άλογα_και_τρίποδα.png)"></div>
+                </div>
+                <button class="item__enter unbutton gsap-landing">
+                    <svg class="item__enter-circle" vector-effect="non-scaling-stroke" width="800" height="800">
+                        <circle vector-effect="non-scaling-stroke" cx="400" cy="400" r="150" />
+                    </svg>
+                </button>
+                <h2 class="heading heading--item gsap-landing">
+                    <span data-splitting="" style="font-size:35px!important; text-transform: none;">Αττικός αμφορέας με αντωπά άλογα και τρίποδα
+                    </span>
+                </h2>
+                <div class="item__meta">
+                    <span class="item__meta-row gsap-landing">
+                      <!--  <span style="text-transform:none;">Εθνικό Αρχαιολογικό Μουσείο, αριθμός ευρετηρίου Χ 15087
+                        </span>  -->
+                    </span>
+                    <span class="item__meta-row gsap-landing">
+                      <!--  <span style="text-transform:none;">Χρονολογία: Πιθανώς 150 – 100 π.Χ.
+                        </span>  -->
+                    </span>
+                </div>
+                <div class="item__excerpt gsap-landing">
+                  <!--  <p>
+                        Ο Μηχανισμός σώζεται σε ογδόντα δύο (82) θραύσματα, τα οποία περιλαμβάνουν τριάντα (30)
+                        οδοντωτούς τροχούς, δίσκους, κλίμακες, άξονες και δείκτες. Οι ελληνικές, αστρονομικού
+                        περιεχομένου επιγραφές στην επιφάνεια του Μηχανισμού αναφέρονται σε αστρονομικούς και
+                        ημερολογιακούς υπολογισμούς, ενώ αυτές στις μεταλλικές πλάκες αφορούν στις οδηγίες χρήσεις
+                        του οργάνου.
+                    </p>  -->
+                    <a class="item__excerpt-link" href="#content-3">
+                        <span>Read more
+                        </span> 
+                    </a>
+                </div>
+            </article>
+            <article class="item item--invert" style="margin-top: 200px; margin-bottom: -75px;">
+                <div class="item__imgwrap gsap-landing">
+                    <div class="item__img" style="background-image:url(Αττική_τριφυλλόστομη_οινοχόη_με_επιγραφή.png)">
+                    </div>
+                </div>
+                <button class="item__enter unbutton gsap-landing">
+                    <svg class="item__enter-circle" vector-effect="non-scaling-stroke" width="800" height="800">
+                        <circle vector-effect="non-scaling-stroke" cx="400" cy="400" r="150" />
+                    </svg>
+                </button>
+                <h2 class="heading heading--item gsap-landing">
+                    <span data-splitting="" style="font-size:35px!important; text-transform: none; ">Αττική τριφυλλόστομη οινοχόη με επιγραφή
+                    </span>
+                </h2>
+                <div class="item__meta gsap-landing">
+                    <span class="item__meta-row">
+                     <!--   <span style="text-transform:none;">Αθήνα, Εθνικό Αρχαιολογικό Μουσείο
+                        </span>  -->
+                        <span class="item__meta-row">
+                           <!--  <span style="text-transform:none;">Χρονολογία: Γύρω στο 500 π.Χ.
+                            </span>  -->
+                        </span>
+                    </span>
+                </div>
+                <div class="item__excerpt gsap-landing">
+                  <!--  <p>Ο νεαρός ηνίοχος, με μακρύ λευκό χιτώνα και ταινία στα μαλλιά, οδηγεί το τέθριππο, συγκρατώντας
+                        με τα ηνία τα άλογα που καλπάζουν, έχοντας φτάσει στην πιο κρίσιμη στιγμή του αγώνα, στο σημείο
+                        της καμπής.
+                    </p> -->
+                    <a class="item__excerpt-link" href="#content-4">
+                        <span>Read more
+                        </span> 
+                    </a>
+                </div>
+            </article>
+          <!--  <article class="item" style="margin-bottom:-200px">
+                <div class="item__imgwrap gsap-landing">
+                    <div class="item__img" style="background-image:url(Αττική_μελανόμορφη_οινοχόη.png)"></div>
+                </div>
+                <button class="item__enter unbutton gsap-landing">
+                    <svg class="item__enter-circle" vector-effect="non-scaling-stroke" width="800" height="800">
+                        <circle vector-effect="non-scaling-stroke" cx="400" cy="400" r="150" />
+                    </svg>
+                </button>
+                <h2 class="heading heading--item gsap-landing">
+                    <span data-splitting="" style="font-size:50px!important; text-transform: none;">Αττική μελανόμορφη οινοχόη
+                    </span>
+                </h2>
+                <div class="item__meta">
+                    <span class="item__meta-row gsap-landing">
+                        <span style="text-transform:none;">Εθνικό Αρχαιολογικό Μουσείο, αριθμός ευρετηρίου Χ 15087
+                        </span>  
+                    </span>
+                    <span class="item__meta-row gsap-landing">
+                        <span style="text-transform:none;">Χρονολογία: Πιθανώς 150 – 100 π.Χ.
+                        </span>  
+                    </span>
+                </div>
+                <div class="item__excerpt gsap-landing">
+                    <p>
+                        Ο Μηχανισμός σώζεται σε ογδόντα δύο (82) θραύσματα, τα οποία περιλαμβάνουν τριάντα (30)
+                        οδοντωτούς τροχούς, δίσκους, κλίμακες, άξονες και δείκτες. Οι ελληνικές, αστρονομικού
+                        περιεχομένου επιγραφές στην επιφάνεια του Μηχανισμού αναφέρονται σε αστρονομικούς και
+                        ημερολογιακούς υπολογισμούς, ενώ αυτές στις μεταλλικές πλάκες αφορούν στις οδηγίες χρήσεις
+                        του οργάνου.
+                    </p>  
+                    <a class="item__excerpt-link" href="#content-5">
+                        <span>Read more
+                        </span> 
+                    </a>
+                </div>
+            </article> -->
+            <article class="item" style="margin-bottom:-200px">
+                <div class="item__imgwrap gsap-landing">
+                    <div class="item__img" style="background-image:url(Χάλκινο_στεφάνι_με_φύλλα_και_τμήμα_κλάδου_ελιάς__.png)">
+                    </div>
+                </div>
+                <button class="item__enter unbutton gsap-landing">
+                    <svg class="item__enter-circle" vector-effect="non-scaling-stroke" width="800" height="800">
+                        <circle vector-effect="non-scaling-stroke" cx="400" cy="400" r="150" />
+                    </svg>
+                </button>
+                <h2 class="heading heading--item gsap-landing">
+                    <span data-splitting="" style="font-size:30px!important; text-transform: none;">Χάλκινο στεφάνι με φύλλα και τμήμα κλάδου ελιάς
+                    </span> <span data-splitting=""
+                        style="font-size:60px!important; text-transform: none; margin-top:10px;">
+                    </span>
+                </h2>
+                <div class="item__meta">
+                    <span class="item__meta-row gsap-landing">
+                       <!--<span style="text-transform:none;">Αρχαιολογικό Μουσείο Ηρακλείου
+                        </span> -->
+                    </span>
+                    <span class="item__meta-row gsap-landing">
+                     <!--<span style="text-transform:none;">Χρονολογία: ΥΜ ΙΑ (1600 – 1500 π.Χ.)
+                        </span> -->
+                    </span>
+                </div>
+                <div class="item__excerpt gsap-landing">
+                   <!-- <p>Στην παράσταση δεσπόζει κεντρική μορφή, που βρίσκεται σε έντονο διασκελισμό. Αποδίδεται με έντονη
+                        μυολογία ποδιών, αντιθετική κάμψη των χεριών και ροπή του κορμού και της κεφαλής προς τα πίσω,
+                        με αιώρηση των βοστρύχων - στοιχεία που αποτυπώνουν στιγμιαία την ταχύτητα που έχει αναπτύξει ο,
+                        ευλόγως αποκαλούμενος, «δρομέας»
+                    </p>-->
+                    <a class="item__excerpt-link" href="#content-5">
+                        <span>Read more
+                        </span>
+                    </a>
+                </div>
+            </article>
+            <article class="item item--invert" style="margin-top: 200px; margin-bottom:-200px">
+                <div class="item__imgwrap gsap-landing">
+                    <div class="item__img" style="background-image:url(Αναθηματικό_ανάγλυφο.png)">
+                    </div>
+                </div>
+                <button class="item__enter unbutton gsap-landing">
+                    <svg class="item__enter-circle" vector-effect="non-scaling-stroke" width="800" height="800">
+                        <circle vector-effect="non-scaling-stroke" cx="400" cy="400" r="150" />
+                    </svg>
+                </button>
+                <h2 class="heading heading--item gsap-landing">
+                    <span data-splitting="" style="font-size:50px!important; text-transform: none; ">Αναθηματικό ανάγλυφο
+                    </span>
+                </h2>
+                <div class="item__meta gsap-landing">
+                    <span class="item__meta-row">
+                     <!--   <span style="text-transform:none;">Αθήνα, Εθνικό Αρχαιολογικό Μουσείο
+                        </span>  -->
+                        <span class="item__meta-row">
+                           <!--  <span style="text-transform:none;">Χρονολογία: Γύρω στο 500 π.Χ.
+                            </span>  -->
+                        </span>
+                    </span>
+                </div>
+                <div class="item__excerpt gsap-landing">
+                  <!--  <p>Ο νεαρός ηνίοχος, με μακρύ λευκό χιτώνα και ταινία στα μαλλιά, οδηγεί το τέθριππο, συγκρατώντας
+                        με τα ηνία τα άλογα που καλπάζουν, έχοντας φτάσει στην πιο κρίσιμη στιγμή του αγώνα, στο σημείο
+                        της καμπής.
+                    </p> -->
+                    <a class="item__excerpt-link" href="#content-6">
+                        <span>Read more
+                        </span> 
+                    </a>
+                </div>
+            </article>
+            <article class="item" style="margin-bottom:-200px">
+                <div class="item__imgwrap gsap-landing">
+                    <div class="item__img" style="background-image:url(Τμήμα_πλάκας_με_ανάγλυφη_παράσταση_φτερωτής_Νίκης.png)">
+                    </div>
+                </div>
+                <button class="item__enter unbutton gsap-landing">
+                    <svg class="item__enter-circle" vector-effect="non-scaling-stroke" width="800" height="800">
+                        <circle vector-effect="non-scaling-stroke" cx="400" cy="400" r="150" />
+                    </svg>
+                </button>
+                <h2 class="heading heading--item gsap-landing">
+                    <span data-splitting="" style="font-size:30px!important; text-transform: none;">Τμήμα πλάκας με ανάγλυφη παράσταση φτερωτής Νίκης
+                    </span> <span data-splitting=""
+                        style="font-size:60px!important; text-transform: none; margin-top:10px;">
+                    </span>
+                </h2>
+                <div class="item__meta">
+                    <span class="item__meta-row gsap-landing">
+                       <!--<span style="text-transform:none;">Αρχαιολογικό Μουσείο Ηρακλείου
+                        </span> -->
+                    </span>
+                    <span class="item__meta-row gsap-landing">
+                     <!--<span style="text-transform:none;">Χρονολογία: ΥΜ ΙΑ (1600 – 1500 π.Χ.)
+                        </span> -->
+                    </span>
+                </div>
+                <div class="item__excerpt gsap-landing">
+                   <!-- <p>Στην παράσταση δεσπόζει κεντρική μορφή, που βρίσκεται σε έντονο διασκελισμό. Αποδίδεται με έντονη
+                        μυολογία ποδιών, αντιθετική κάμψη των χεριών και ροπή του κορμού και της κεφαλής προς τα πίσω,
+                        με αιώρηση των βοστρύχων - στοιχεία που αποτυπώνουν στιγμιαία την ταχύτητα που έχει αναπτύξει ο,
+                        ευλόγως αποκαλούμενος, «δρομέας»
+                    </p>-->
+                    <a class="item__excerpt-link" href="#content-7">
+                        <span>Read more
+                        </span>
+                    </a>
+                </div>
+            </article>
+            <article class="item item--invert" style="margin-top: 200px; margin-bottom:-200px">
+                <div class="item__imgwrap gsap-landing">
+                    <div class="item__img" style="background-image:url(Ερυθρόμορφη-οινοχόη-με-παράσταση-Νίκης-σε-βωμό.png)">
+                    </div>
+                </div>
+                <button class="item__enter unbutton gsap-landing">
+                    <svg class="item__enter-circle" vector-effect="non-scaling-stroke" width="800" height="800">
+                        <circle vector-effect="non-scaling-stroke" cx="400" cy="400" r="150" />
+                    </svg>
+                </button>
+                <h2 class="heading heading--item gsap-landing">
+                    <span data-splitting="" style="font-size:30px!important; text-transform: none; ">Ερυθρόμορφη οινοχόη με παράσταση Νίκης σε βωμό
+                    </span>
+                </h2>
+                <div class="item__meta gsap-landing">
+                    <span class="item__meta-row">
+                     <!--   <span style="text-transform:none;">Αθήνα, Εθνικό Αρχαιολογικό Μουσείο
+                        </span>  -->
+                        <span class="item__meta-row">
+                           <!--  <span style="text-transform:none;">Χρονολογία: Γύρω στο 500 π.Χ.
+                            </span>  -->
+                        </span>
+                    </span>
+                </div>
+                <div class="item__excerpt gsap-landing">
+                  <!--  <p>Ο νεαρός ηνίοχος, με μακρύ λευκό χιτώνα και ταινία στα μαλλιά, οδηγεί το τέθριππο, συγκρατώντας
+                        με τα ηνία τα άλογα που καλπάζουν, έχοντας φτάσει στην πιο κρίσιμη στιγμή του αγώνα, στο σημείο
+                        της καμπής.
+                    </p> -->
+                    <a class="item__excerpt-link" href="#content-8">
+                        <span>Read more
+                        </span> 
+                    </a>
+                </div>
+            </article>
+            <article class="item" style="margin-bottom:-200px">
+                <div class="item__imgwrap gsap-landing">
+                    <div class="item__img" style="background-image:url(Ερυθρόμορφος_κρατήρας_με_παράσταση_βράβευσης_αθλητή.png)">
+                    </div>
+                </div>
+                <button class="item__enter unbutton gsap-landing">
+                    <svg class="item__enter-circle" vector-effect="non-scaling-stroke" width="800" height="800">
+                        <circle vector-effect="non-scaling-stroke" cx="400" cy="400" r="150" />
+                    </svg>
+                </button>
+                <h2 class="heading heading--item gsap-landing">
+                    <span data-splitting="" style="font-size:25px!important; text-transform: none;">Ερυθρόμορφος κρατήρας με παράσταση βράβευσης αθλητή
+                    </span> <span data-splitting=""
+                        style="font-size:60px!important; text-transform: none; margin-top:10px;">
+                    </span>
+                </h2>
+                <div class="item__meta">
+                    <span class="item__meta-row gsap-landing">
+                       <!--<span style="text-transform:none;">Αρχαιολογικό Μουσείο Ηρακλείου
+                        </span> -->
+                    </span>
+                    <span class="item__meta-row gsap-landing">
+                     <!--<span style="text-transform:none;">Χρονολογία: ΥΜ ΙΑ (1600 – 1500 π.Χ.)
+                        </span> -->
+                    </span>
+                </div>
+                <div class="item__excerpt gsap-landing">
+                   <!-- <p>Στην παράσταση δεσπόζει κεντρική μορφή, που βρίσκεται σε έντονο διασκελισμό. Αποδίδεται με έντονη
+                        μυολογία ποδιών, αντιθετική κάμψη των χεριών και ροπή του κορμού και της κεφαλής προς τα πίσω,
+                        με αιώρηση των βοστρύχων - στοιχεία που αποτυπώνουν στιγμιαία την ταχύτητα που έχει αναπτύξει ο,
+                        ευλόγως αποκαλούμενος, «δρομέας»
+                    </p>-->
+                    <a class="item__excerpt-link" href="#content-9">
+                        <span>Read more
+                        </span>
+                    </a>
+                </div>
+            </article>
+            <article class="item item--invert" style="margin-top: 200px; margin-bottom:-200px">
+                <div class="item__imgwrap gsap-landing">
+                    <div class="item__img" style="background-image:url(Μελανόμορφος_αμφορέας_με_παράσταση_επινίκιου_εορτασμού.png)">
+                    </div>
+                </div>
+                <button class="item__enter unbutton gsap-landing">
+                    <svg class="item__enter-circle" vector-effect="non-scaling-stroke" width="800" height="800">
+                        <circle vector-effect="non-scaling-stroke" cx="400" cy="400" r="150" />
+                    </svg>
+                </button>
+                <h2 class="heading heading--item gsap-landing">
+                    <span data-splitting="" style="font-size:25px!important; text-transform: none; ">Μελανόμορφος αμφορέας με παράσταση επινίκου εορτασμού
+                    </span>
+                </h2>
+                <div class="item__meta gsap-landing">
+                    <span class="item__meta-row">
+                     <!--   <span style="text-transform:none;">Αθήνα, Εθνικό Αρχαιολογικό Μουσείο
+                        </span>  -->
+                        <span class="item__meta-row">
+                           <!--  <span style="text-transform:none;">Χρονολογία: Γύρω στο 500 π.Χ.
+                            </span>  -->
+                        </span>
+                    </span>
+                </div>
+                <div class="item__excerpt gsap-landing">
+                  <!--  <p>Ο νεαρός ηνίοχος, με μακρύ λευκό χιτώνα και ταινία στα μαλλιά, οδηγεί το τέθριππο, συγκρατώντας
+                        με τα ηνία τα άλογα που καλπάζουν, έχοντας φτάσει στην πιο κρίσιμη στιγμή του αγώνα, στο σημείο
+                        της καμπής.
+                    </p> -->
+                    <a class="item__excerpt-link" href="#content-10">
+                        <span>Read more
+                        </span> 
+                    </a>
+                </div>
+            </article>
+            <article class="item" style="margin-bottom:-200px">
+                <div class="item__imgwrap gsap-landing">
+                    <div class="item__img" style="background-image:url(Λίθινη_βάση_με_πέλμα_χάλκινου_ανδριάντα_αθλητή.png)">
+                    </div>
+                </div>
+                <button class="item__enter unbutton gsap-landing">
+                    <svg class="item__enter-circle" vector-effect="non-scaling-stroke" width="800" height="800">
+                        <circle vector-effect="non-scaling-stroke" cx="400" cy="400" r="150" />
+                    </svg>
+                </button>
+                <h2 class="heading heading--item gsap-landing">
+                    <span data-splitting="" style="font-size:25px!important; text-transform: none;">Λίθινη βάση με πέλμα χάλκινου ανδριάντα αθλητή
+                    </span> <span data-splitting=""
+                        style="font-size:60px!important; text-transform: none; margin-top:10px;">
+                    </span>
+                </h2>
+                <div class="item__meta">
+                    <span class="item__meta-row gsap-landing">
+                       <!--<span style="text-transform:none;">Αρχαιολογικό Μουσείο Ηρακλείου
+                        </span> -->
+                    </span>
+                    <span class="item__meta-row gsap-landing">
+                     <!--<span style="text-transform:none;">Χρονολογία: ΥΜ ΙΑ (1600 – 1500 π.Χ.)
+                        </span> -->
+                    </span>
+                </div>
+                <div class="item__excerpt gsap-landing">
+                   <!-- <p>Στην παράσταση δεσπόζει κεντρική μορφή, που βρίσκεται σε έντονο διασκελισμό. Αποδίδεται με έντονη
+                        μυολογία ποδιών, αντιθετική κάμψη των χεριών και ροπή του κορμού και της κεφαλής προς τα πίσω,
+                        με αιώρηση των βοστρύχων - στοιχεία που αποτυπώνουν στιγμιαία την ταχύτητα που έχει αναπτύξει ο,
+                        ευλόγως αποκαλούμενος, «δρομέας»
+                    </p>-->
+                    <a class="item__excerpt-link" href="#content-11">
+                        <span>Read more
+                        </span>
+                    </a>
+                </div>
+            </article>
+            <article class="item item--invert" style="margin-top: 200px; margin-bottom:-200px">
+                <div class="item__imgwrap gsap-landing">
+                    <div class="item__img" style="background-image:url(Ενεπίγραφη_αναθηματική_βάση_νικητή_ιππικών_αγώνων.png)">
+                    </div>
+                </div>
+                <button class="item__enter unbutton gsap-landing">
+                    <svg class="item__enter-circle" vector-effect="non-scaling-stroke" width="800" height="800">
+                        <circle vector-effect="non-scaling-stroke" cx="400" cy="400" r="150" />
+                    </svg>
+                </button>
+                <h2 class="heading heading--item gsap-landing">
+                    <span data-splitting="" style="font-size:25px!important; text-transform: none; ">Ενεπίγραφη αναθηματική βάση νικητή ιππικών αγώνων
+                    </span>
+                </h2>
+                <div class="item__meta gsap-landing">
+                    <span class="item__meta-row">
+                     <!--   <span style="text-transform:none;">Αθήνα, Εθνικό Αρχαιολογικό Μουσείο
+                        </span>  -->
+                        <span class="item__meta-row">
+                           <!--  <span style="text-transform:none;">Χρονολογία: Γύρω στο 500 π.Χ.
+                            </span>  -->
+                        </span>
+                    </span>
+                </div>
+                <div class="item__excerpt gsap-landing">
+                  <!--  <p>Ο νεαρός ηνίοχος, με μακρύ λευκό χιτώνα και ταινία στα μαλλιά, οδηγεί το τέθριππο, συγκρατώντας
+                        με τα ηνία τα άλογα που καλπάζουν, έχοντας φτάσει στην πιο κρίσιμη στιγμή του αγώνα, στο σημείο
+                        της καμπής.
+                    </p> -->
+                    <a class="item__excerpt-link" href="#content-12">
+                        <span>Read more
+                        </span> 
+                    </a>
+                </div>
+            </article>
+            <article class="item" style="margin-bottom:-200px">
+                <div class="item__imgwrap gsap-landing">
+                    <div class="item__img" style="background-image:url(Ενεπίγραφο_βάθρο_χάλκινου_αγάλματος.png)">
+                    </div>
+                </div>
+                <button class="item__enter unbutton gsap-landing">
+                    <svg class="item__enter-circle" vector-effect="non-scaling-stroke" width="800" height="800">
+                        <circle vector-effect="non-scaling-stroke" cx="400" cy="400" r="150" />
+                    </svg>
+                </button>
+                <h2 class="heading heading--item gsap-landing">
+                    <span data-splitting="" style="font-size:35px!important; text-transform: none;">Ενεπίγραφο βάθρο χάλκινου αγάλματος
+                    </span> <span data-splitting=""
+                        style="font-size:60px!important; text-transform: none; margin-top:10px;">
+                    </span>
+                </h2>
+                <div class="item__meta">
+                    <span class="item__meta-row gsap-landing">
+                       <!--<span style="text-transform:none;">Αρχαιολογικό Μουσείο Ηρακλείου
+                        </span> -->
+                    </span>
+                    <span class="item__meta-row gsap-landing">
+                     <!--<span style="text-transform:none;">Χρονολογία: ΥΜ ΙΑ (1600 – 1500 π.Χ.)
+                        </span> -->
+                    </span>
+                </div>
+                <div class="item__excerpt gsap-landing">
+                   <!-- <p>Στην παράσταση δεσπόζει κεντρική μορφή, που βρίσκεται σε έντονο διασκελισμό. Αποδίδεται με έντονη
+                        μυολογία ποδιών, αντιθετική κάμψη των χεριών και ροπή του κορμού και της κεφαλής προς τα πίσω,
+                        με αιώρηση των βοστρύχων - στοιχεία που αποτυπώνουν στιγμιαία την ταχύτητα που έχει αναπτύξει ο,
+                        ευλόγως αποκαλούμενος, «δρομέας»
+                    </p>-->
+                    <a class="item__excerpt-link" href="#content-13">
+                        <span>Read more
+                        </span>
+                    </a>
+                </div>
+            </article>
+            <article class="item item--invert" style="margin-top: 200px; margin-bottom:-200px">
+                <div class="item__imgwrap gsap-landing">
+                    <div class="item__img" style="background-image:url(Αναθηματικό_ανάγλυφο_με_παράσταση_αθλητή.png)">
+                    </div>
+                </div>
+                <button class="item__enter unbutton gsap-landing">
+                    <svg class="item__enter-circle" vector-effect="non-scaling-stroke" width="800" height="800">
+                        <circle vector-effect="non-scaling-stroke" cx="400" cy="400" r="150" />
+                    </svg>
+                </button>
+                <h2 class="heading heading--item gsap-landing">
+                    <span data-splitting="" style="font-size:35px!important; text-transform: none; ">Αναθηματικό ανάγλυφο με παράσταση αθλητή
+                    </span>
+                </h2>
+                <div class="item__meta gsap-landing">
+                    <span class="item__meta-row">
+                     <!--   <span style="text-transform:none;">Αθήνα, Εθνικό Αρχαιολογικό Μουσείο
+                        </span>  -->
+                        <span class="item__meta-row">
+                           <!--  <span style="text-transform:none;">Χρονολογία: Γύρω στο 500 π.Χ.
+                            </span>  -->
+                        </span>
+                    </span>
+                </div>
+                <div class="item__excerpt gsap-landing">
+                  <!--  <p>Ο νεαρός ηνίοχος, με μακρύ λευκό χιτώνα και ταινία στα μαλλιά, οδηγεί το τέθριππο, συγκρατώντας
+                        με τα ηνία τα άλογα που καλπάζουν, έχοντας φτάσει στην πιο κρίσιμη στιγμή του αγώνα, στο σημείο
+                        της καμπής.
+                    </p> -->
+                    <a class="item__excerpt-link" href="#content-14">
+                        <span>Read more
+                        </span> 
+                    </a>
+                </div>
+            </article>
+            <article class="item" style="margin-bottom:-200px">
+                <div class="item__imgwrap gsap-landing">
+                    <div class="item__img" style="background-image:url(Ενεπίγραφος_υλινδρικός_βωμίσκος.png)">
+                    </div>
+                </div>
+                <button class="item__enter unbutton gsap-landing">
+                    <svg class="item__enter-circle" vector-effect="non-scaling-stroke" width="800" height="800">
+                        <circle vector-effect="non-scaling-stroke" cx="400" cy="400" r="150" />
+                    </svg>
+                </button>
+                <h2 class="heading heading--item gsap-landing">
+                    <span data-splitting="" style="font-size:40px!important; text-transform: none;">Ενεπίγραφος υλινδρικός βωμίσκος
+                    </span> <span data-splitting=""
+                        style="font-size:60px!important; text-transform: none; margin-top:10px;">
+                    </span>
+                </h2>
+                <div class="item__meta">
+                    <span class="item__meta-row gsap-landing">
+                       <!--<span style="text-transform:none;">Αρχαιολογικό Μουσείο Ηρακλείου
+                        </span> -->
+                    </span>
+                    <span class="item__meta-row gsap-landing">
+                     <!--<span style="text-transform:none;">Χρονολογία: ΥΜ ΙΑ (1600 – 1500 π.Χ.)
+                        </span> -->
+                    </span>
+                </div>
+                <div class="item__excerpt gsap-landing">
+                   <!-- <p>Στην παράσταση δεσπόζει κεντρική μορφή, που βρίσκεται σε έντονο διασκελισμό. Αποδίδεται με έντονη
+                        μυολογία ποδιών, αντιθετική κάμψη των χεριών και ροπή του κορμού και της κεφαλής προς τα πίσω,
+                        με αιώρηση των βοστρύχων - στοιχεία που αποτυπώνουν στιγμιαία την ταχύτητα που έχει αναπτύξει ο,
+                        ευλόγως αποκαλούμενος, «δρομέας»
+                    </p>-->
+                    <a class="item__excerpt-link" href="#content-15">
+                        <span>Read more
+                        </span>
+                    </a>
+                </div>
+            </article>
+            <article class="item item--invert" style="margin-top: 200px; margin-bottom:-200px">
+                <div class="item__imgwrap gsap-landing">
+                    <div class="item__img" style="background-image:url(Επιτύμβιο_ανάγλυφο_εφήβου.png)">
+                    </div>
+                </div>
+                <button class="item__enter unbutton gsap-landing">
+                    <svg class="item__enter-circle" vector-effect="non-scaling-stroke" width="800" height="800">
+                        <circle vector-effect="non-scaling-stroke" cx="400" cy="400" r="150" />
+                    </svg>
+                </button>
+                <h2 class="heading heading--item gsap-landing">
+                    <span data-splitting="" style="font-size:40px!important; text-transform: none; ">Επιτύμβιο ανάγλυφο εφήβου
+                    </span>
+                </h2>
+                <div class="item__meta gsap-landing">
+                    <span class="item__meta-row">
+                     <!--   <span style="text-transform:none;">Αθήνα, Εθνικό Αρχαιολογικό Μουσείο
+                        </span>  -->
+                        <span class="item__meta-row">
+                           <!--  <span style="text-transform:none;">Χρονολογία: Γύρω στο 500 π.Χ.
+                            </span>  -->
+                        </span>
+                    </span>
+                </div>
+                <div class="item__excerpt gsap-landing">
+                  <!--  <p>Ο νεαρός ηνίοχος, με μακρύ λευκό χιτώνα και ταινία στα μαλλιά, οδηγεί το τέθριππο, συγκρατώντας
+                        με τα ηνία τα άλογα που καλπάζουν, έχοντας φτάσει στην πιο κρίσιμη στιγμή του αγώνα, στο σημείο
+                        της καμπής.
+                    </p> -->
+                    <a class="item__excerpt-link" href="#content-16">
+                        <span>Read more
+                        </span> 
+                    </a>
+                </div>
+            </article>
+ 
+            
+
+            <!--    <article class="item">
+                <div class="item__imgwrap">
+                    <div class="item__img" style="background-image:url(5.949baea4.jpg)">
+                    </div>
+                </div>
+                <button class="item__enter unbutton">
+                    <svg class="item__enter-circle" vector-effect="non-scaling-stroke" width="800" height="800">
+                        <circle vector-effect="non-scaling-stroke" cx="400" cy="400" r="150"/>
+                    </svg>
+                </button>
+                <h2 class="heading heading--item">
+                    <span data-splitting="">Temperance
+                    </span>
+                    <span data-splitting="">prime
+                    </span>
+                </h2>
+                <div class="item__meta">
+                    <span class="item__meta-row">
+                        <span>By Sally Mullis
+                        </span>
+                    </span>
+                    <span class="item__meta-row">
+                        <span>December &mdash; 2022
+                        </span>
+                    </span>
+                </div> <div class="item__excerpt"> 
+                <p>And albeit whatever thing we hear or see, sitting, walking, travelling, or conversing, may be fitly called our book, and is of the same effect that writings are, yet grant the thing to be prohibited were only books, it appears that this Order hitherto is far insufficient to the end which it intends.
+                </p> 
+                <a class="item__excerpt-link" href="#content-5">
+                    <span>Read more
+                    </span>
+                </a>
+                </div>
+            </article>
+            <article class="item item--invert">
+                <div class="item__imgwrap">
+                    <div class="item__img" style="background-image:url(6.924e64bf.jpg)"></div> </div> <button class="item__enter unbutton"> <svg class="item__enter-circle" vector-effect="non-scaling-stroke" width="800" height="800"><circle vector-effect="non-scaling-stroke" cx="400" cy="400" r="150"/></svg> </button> <h2 class="heading heading--item"> <span data-splitting="">Quantum
+                </span> 
+                <span data-splitting="">leap
+                </span> </h2> <div class="item__meta"> 
+                <span class="item__meta-row">
+                    <span>By Lorenzo Augusto
+                    </span>
+                </span> 
+                <span class="item__meta-row">
+                    <span>January &mdash; 2023
+                    </span>
+                </span>
+                </div> 
+                <div class="item__excerpt"> 
+                    <p>And how can a man teach with authority, which is the life of teaching; how can he be a doctor in his book as he ought to be, or else had better be silent, whenas all he teaches, all he delivers, is but under the tuition, under the correction of his patriarchal licenser to blot or alter what precisely accords not with the hidebound humour which he calls his judgment?
+                    </p>
+                    <a class="item__excerpt-link" href="#content-6">
+                        <span>Read more
+                </span>
+                </a>
+                </div>
+            </article>   -->
+
+        </section>
+        <section class="content">
+            <article class="content__article" id="content-1">
+                <h2 class="heading gsap-landing"> <span data-splitting="" style="font-size: 45px;">Μικρογραφικός αναθηματικός τριποδικός λέβητας</span>
+                    <span data-splitting="" style="font-size:60px!important; margin-top: 10PX;">
+                    </span>
+                    <span data-splitting="">
+                    </span>
+                </h2>
+                <div class="content__text gsap-landing">
+                    <div class="hover-img">
+                    </div>
+                    <p> <br> • Κειμενολεζάντα / Τίτλος: Μικρογραφικός αναθηματικός τριποδικός λέβητας 
+                        <br> • Μουσείο: Αθήνα, Εθνικό Αρχαιολογικό Μουσείο, αρ. ευρ. Χ 6133
+                        <br> • Χρονολογία: 8ος αι. π.Χ.
+                        <br> • Διαστάσεις: Ύψ. 0,14 μ.
+                        <br> • Υλικό: Χαλκός
+                        <br> • Προέλευση: Ιερό της Ολυμπίας
+                    </p>
+                    <p>Ο μικρός τριποδικός λέβητας μιμείται αντίστοιχους μεγάλου μεγέθους λέβητες. Στηρίζεται σε τρία συμπαγή πόδια και έχει δύο κυκλικές όρθιες λαβές που διακοσμούνται στην κορυφή τους από πουλιά. Πρόκειται για ανάθημα (αφιέρωμα) κάποιου πιστού στο ιερό. Οι τριποδικοί λέβητες, ακόμη και μεγάλων διαστάσεων, ήταν από τα πιο προσφιλή και πολυάριθμα αναθήματα των πιστών στα αρχαία ελληνικά ιερά.
+                    </p>
+                    <p>Maass, M. (1978). Die Geometrischen Dreifusse von Olympia, Olympische  Forschungen X, no.397, 221, pl.59, Berlin: Walter de Gruyter.
+                    <br><br>
+                    Τζάχου- Αλεξανδρή, Ο. (Επιμ.), (1989-1990). Το Πνεύμα  και το Σώμα, αρ.105,  215 (Π.Γ.  Καλλιγάς), Αθήνα: ΥΠ.ΠΟ.                        
+                    </p>
+                    </p>
+                    <!--<p class="en-title">English</p>
+                    <p> <br> • Caption: The “Boxer Vase”
+                        <br> • Museum: Heraklion Archaeological Museum
+                        <br> • Dating: LΜ Ι (1600 -1450 BC)
+                        <br> • Dimensions (in cm.): Max. restored Height. 44.8 cm
+                        <br> • Material: Stone, serpentinite
+                        <br> • Provenance: Hagia Triada, palatial building
+                    </p>
+                    <p>
+                        Conical libation vase with relief scenes in four zones, depicting pairs of boxers wearing gloves
+                        and special footwear, engaging in two distinct types of boxing, judging from the different
+                        helmets (with or without plumes and cheek pieces), pairs of wrestlers, and bull-leapers (we see
+                        the ill-fated leap of one athlete). In one interpretation, the different poses, such as the
+                        frontal attack (with punches to the face), the pursuit (one behind the other) and the victory
+                        (one kneeling in front of the other) are successive “episodes” of the match of a single pair of
+                        athletes in each zone.
+                        The athletes are portrayed with narrow waists, long legs and strongly muscled legs and torso.
+                        This is a comprehensive depiction of the main athletic activities that took place in Minoan
+                        Crete at its greatest height.
+                    </p>-->
+                </div>
+            </article>
+            <article class="content__article content__article--invert" id="content-2">
+                <h2 class="heading gsap-landing">
+                    <span data-splitting="" style="font-size:60px!important;">Τριποδικός σφυρήλατος τρίποδας</span>
+                    <span data-splitting="" style="font-size:60px!important; margin-top: 10PX;">
+                    </span>
+                </h2>
+                <div class="content__text gsap-landing">
+                    <div class="hover-img2"></div> 
+                    <p> <br> • Κειμενολεζάντα / Τίτλος: Αναπαράσταση σφυρήλατου τριποδικού λέβητα, σύμφωνα με τα πρότυπα του 8ου αι. π.Χ.
+                        <br> • Μουσείο: Μουσείο της Ιστορίας των Ολυμπιακών Αγώνων της Αρχαιότητας
+                        <br> • Χρονολογία: Όψιμη ΥΜ ΙΒ – ΥΜ ΙΙ (1450 - 1400 π.Χ.)
+                        <br> • Εφορεία Αρχαιοτήτων Ηλείας
+                        <br> • Υλικό: Χαλκός
+                        <br> • Προέλευση: Ιερό της Ολυμπίας
+                    </p>
+                    <p>Αναπαράσταση τριποδικού λέβητα των μέσων του 8ου αι. π.Χ. Φέρει εγχάρακτη διακόσμηση στα πόδια, τα οποία είναι σφυρήλατα, καθώς και γύρω από το χείλος και στις λαβές, που είναι επίσης σφυρήλατες, κυκλικές και επιστέφονται από ιππάρια.
+                    </p>
+                    <p>Χατζή, Γ. (2008). Το Αρχαιολογικό Μουσείο Ολυμπίας, Αθήνα: Κοινωφελές Ίδρυμα Ιωάννη Σ. Λάτση.
+                    </p>
+                    <!--<p class="en-title">English</p>
+                    <p> <br> • Caption: The Taureador Fresco
+                        <br> • Museum: Heraklion Archaeological Museum
+                        <br> • Dating: Late LΜ ΙΒ – LΜ ΙΙ (1460 - 1400 BC)
+                        <br> • Dimensions (in cm.): Max. L. (incl. frame) 70 cm.
+                        <br> • Material: Fresco
+                        <br> • Provenance: Knossos, East Wing of the palace
+                    </p>
+                    <p> One of at least six consecutive decorative panels that ran around the walls of a room, all
+                        depicting the subject of bull-leaping, the execution of acrobatic leaps over charging bulls.
+                        This painting probably depicts three basic “episodes” of a type of leap over the bull: first the
+                        grasping of the horns, then the launching of the athlete’s body vertically over the back of the
+                        bull by the tossing of the enraged animal’s head, and lastly the athlete’s landing behind it.
+                        Bull-leaping was performed frequently, at least in the environment of the palace of Knossos, and
+                        appears to have involved some religious symbolism, given the symbolic identification of the bull
+                        with the vigour of nature</p>-->
+                </div>
+            </article>
+            <article class="content__article" id="content-3">
+                <h2 class="heading gsap-landing"> <span data-splitting="" style="font-size:35px!important;">Αττικός αμφορέας με αντωπά άλογα και τρίποδα
+                    </span>
+                    <span data-splitting="" style="font-size:60px!important; margin-top: 10PX;">
+                    </span>
+                </h2>
+                <div class="content__text gsap-landing">
+                    <div class="hover-img3"></div> 
+                    <p> <br> • Κειμενολεζάντα / Τίτλος: Αττικός αμφορέας με αντωπά άλογα και τρίποδα
+                        <br> • Μουσείο: ΥΠΠΟΑ/Εθνικό Αρχαιολογικό Μουσείο
+                        <br> • Αρ. Ευρετ.: A 18135
+                        <br> • Χρονολογία: 720-700 π.Χ.
+                        <br> • Διαστάσεις: Ύψος: 32 εκ., διάμ. χείλ.: 13εκ.
+                        <br> • Υλικό: Πηλός
+                        <br> • Προέλευση: Άγνωστη
+                    </p>
+                    <p>Σε μετόπη που αναπτύσσεται στον λαιμό του αγγείου αποδίδεται τριποδικός λέβητας, που πλαισιώνεται από ζεύγος αντωπών αλόγων, τα οποία είναι δεμένα στις λαβές του. Κάτω από την κοιλιά τους διακρίνονται υδρόβια πτηνά. 
+                        Οι λέβητες προσφέρονταν, μαζί και με άλλες παράλληλες χρήσεις, ως έπαθλα σε αγώνες. Κατά τη μαρτυρία των ομηρικών επών όμως, ως έπαθλα  σε νεκρικούς αγώνες προσφέρονταν  και τα άλογα. Με την παρουσία τους στο αγγείο μοιάζει σαν να εικονογραφείται η αξεπέραστη ομηρική περιγραφή για τους αγώνες προς τιμήν του νεκρού Πατρόκλου, αγαπημένου συντρόφου του ήρωα Αχιλλέα (Ψ 257-260). Ίσως όμως και να πρόκειται για μία σύγχρονη με τον αγγειογράφο πρακτική στην Αθήνα.                        
+                    </p>
+                    <p>Δρ. Έφη Οικονόμου
+                        <br><br>
+                        Ενδεικτική βιβλιογραφία: 
+                        <br>
+Τζάχου-Αλεξανδρή Ο. (επιμ.), Το πνεύμα και το σώμα. Οι αθλητικοί αγώνες στην αρχαία Ελλάδα. Κατάλογος της Έκθεσης στο Εθνικό Αρχαιολογικό Μουσείο, 15 Μαΐου 1989-15 Ιανουαρίου 1990, Αθήνα 1989, σελ. 306, αρ. κατ. 195 (Ρ. Προσκυνητοπούλου)
+                    </p>
+                    <!--<p class="en-title">English</p>
+                    <p> <br> • Caption: “The Antikythera Mechanism”
+                        <br> • Ministry of Culture and Sports
+                        <br> • Athens, National Archaeological Museum, inv. no. Χ 15087
+                        <br> • Dating: Probably 150 – 100 BC
+                        <br> • Max. Dimensions: (fragment A) 17.7 cm., (fragment B) 11.8 cm., (fragment C) 10.5 cm.
+                        <br> • Material: Bronze
+                        <br> • Provenance: Ancient shipwreck in the sea off Antikythera, January 1901
+                    </p>
+                    <p>The Mechanism is preserved in eighty two (82) fragments, bearing thirty (30) gears with teeth,
+                        as well as dials, scales, axles and pointers. The greek, astronomical inscriptions on the
+                        surface
+                        of the Mechanism refer to astronomical and calendar calculations, while the inscriptions on its
+                        metal protective plates contain instructions for its use. The device was housed in a wooden
+                        frame of possible dimensions 33x18x10 cm, which had a bronze protective plaque on the front
+                        and the back side.
+                    </p>
+                    <p>It calculated the movement of the sun and the moon and probably of the five known planets in
+                        antiquity. It was used for predicting accurately astronomical phenomena, such as solar and
+                        lunar eclipses, for keeping an accurate calendar of many years, for calculating the date of Pan-
+                        Hellenic celebrations, and much more.
+                    </p>
+                    </p>
+                    <p>The Antikythera Mechanism is the earliest preserved portable astronomical calculator and the
+                        earliest known modular mechanism in the world, that bears witness to the astronomical,
+                        mathematical and mechanical ingenuity of ancient Greeks in the middle of the 2nd c. BC.
+                    </p>
+                    <p>Indicative Bibliography</p>
+                    <p> Π.Δ. Ρεδιάδης, «Ὁ ἐξ Ἀντικυθήρων ἀστρόλαβος», στο Ι.Ν. Σβορῶνος, Τó ἐν Ἀθήναις Ἐθνικόν
+                        Μουσεῖον. Ὁ Θησαυρός τοῦ Ναυαγίου τῶν Ἀντικυθήρων, Ἐν Ἀθήναις, 1903, Τόμος Α ́, 44-52, αρ.
+                        21, πιν. Χ και IX 6. <br>
+                        D.J. de Solla Price, “Gears from the Greeks: The Antikythera Mechanism — A calendar computer
+                        from ca. 80 BC”, TransactAmPhilosSoc, 64.7, 1974, p.5-70, επανατύπωση ως μονογραφία από τις
+                        εκδόσεις Science History, Publications, N. York, 1975. <br>
+                        Μ. Αναστασίου, Ο Μηχανισμός των Αντικυθήρων: Αστρονομία και Τεχνολογία στην Αρχαία
+                        Ελλάδα, Διδακτορική Διατριβή, Θεσσαλονίκη, 2014. <br>
+                        Ιω. Σειραδάκης, «Ο Μηχανισμός των Αντικυθήρων: Βασικά στοιχεία και πρόσφατα
+                        αποτελέσματα» στο Μ. Λαγογιάννη-Γεωργακαράκου (επιμ.), Οδύσσειες, Κατάλογος Έκθεσης,
+                        Εθνικό αρχαιολογικό Μουσείο, Αθήνα, 2016, 157-170.
+                    </p>
+                    <p>J. Seiradakis and M. Edmunds, “Our current knowledge of the Antikythera Mechanism”, Nature
+                        Astronomy, 01/2018. 2, p.35-42.
+                        Al. Jones, “The Epoch Dates of the Antikythera Mechanism
+                        (With an Appendix on its Authenticity)”, ISAW Papers 17 (2020), URI
+                        http://dlib.nyu.edu/awdl/isaw/isaw-papers/17/
+                    </p>
+                    <p>
+                        Nomiki G. Palaiokrassa
+                    </p>-->
+                </div>
+            </article>
+            <article class="content__article content__article--invert" id="content-4">
+                <h2 class="heading gsap-landing">
+                    <span data-splitting="" style="font-size:45px!important;">Αττική τριφυλλόστομη οινοχόη με επιγραφή 
+                    </span>
+                    <span data-splitting="" style="font-size:45px!important; margin-top: 10PX;">
+                    </span>
+                </h2>
+                <div class="content__text gsap-landing">
+                    <div class="hover-img4"></div> 
+                    <p> <br> • Κειμενολεζάντα / Τίτλος: Αττική τριφυλλόστομη οινοχόη με επιγραφή
+                        <br> • Μουσείο: ΥΠΠΟΑ/Εθνικό Αρχαιολογικό Μουσείο
+                        <br> • Αρ. Ευρετ.: A 192
+                        <br> • Χρονολογία: 740-730 π.Χ.
+                        <br> • Διαστάσεις:  Ύψος: 23 εκ.
+                        <br> • Υλικό: Πηλός
+                        <br> • Προέλευση: Δίπυλο
+                    </p>
+                    <p> Στον ώμο διαφυλάσσεται η αρχαιότερη μαρτυρία αλφαβητικής γραφής.  Η πρώτη από τις δύο προτάσεις, γραμμένη σε δακτυλικό εξάμετρο, διαβάζεται εύκολα: hoς νῡν ὀρχεστῶν πάντων ἀταλλότατα παῖζει (όποιος τώρα από όλους τους χορευτές χορέψει με περισσότερη χάρη). Αντίθετα, τα γράμματα της πρότασης που έπεται είναι δυσανάγνωστα. Ίσως ο δεύτερος χαράκτης δεν ήταν τόσο καλός γνώστης της γραφής.
+                    </p>
+                    <p>Η επιγραφή αυτή απηχεί τον ομηρικό ποιητικό λόγο, τόσο με την έμμετρη μορφή της όσο και με το επικό της λεξιλόγιο. Ο ὀρχηστής είναι ο ομηρικός χορευτής, ο άτταλος, ο δροσερός νέος, ενώ με το ρήμα παίζω, με την έννοια του χορεύω, ανασύρεται μία χορευτική σκηνή σαν αυτές που περιγράφονται στην Οδύσσεια (θ, 251 κ.εξ.). 
+			</p>
+			<p>Ίσως πρόκειται για έπαθλο σε κάποιο παιχνίδι με σφαίρα, γνωστό ως “ουρανία” που ο νικητής, με τη χάρη και τη δεξιότητά του, κέρδισε  το πρώτο γνωστό βραβείο.
+                <br><br>
+                Δρ. Έφη Οικονόμου              
+            </p>
+            <p>
+                <br>Ενδεικτική βιβλιογραφία: 
+                <br>
+            Καλτσάς Ν. (επιμ.). Αγών, Κατάλογος Έκθεσης, Εθνικό Αρχαιολογικό Μουσείο, 15 Ιουλίου-31 Οκτωβρίου 2004, Αθήνα 2004, σελ. 345, αρ. κατ. 213 (Α. Γκαδόλου)
+            <br><br>
+            Τζάχου-Αλεξανδρή Ο. (επιμ.), Το πνεύμα και το σώμα. Οι αθλητικοί αγώνες στην αρχαία Ελλάδα. Κατάλογος της Έκθεσης στο Εθνικό Αρχαιολογικό Μουσείο, 15 Μαΐου 1989-15 Ιανουαρίου 1990, Αθήνα 1989, σελ. 306, αρ. κατ. 194 (Ρ. Προσκυνητοπούλου)
+            </p>
+            
+                    <!--<p class="en-title">English</p>
+                    <p> <br> • Caption: Attic black-figure oinochoe depicting a chariot race
+                        <br> • Museum: Athens, National Archaeological Museum
+                        <br> • Dating: About 500 BC
+                        <br> • Dimensions Height 18.3 cm; diam. foot 6.8 cm.
+                        <br> • Material: Clay
+                        <br> • Provenance: From Corinth
+                    </p>
+                    <p>The young charioteer, wearing a long chiton and a headband, steers the quadriga, restraining with
+                        the reins the galloping horses, as they reach the most critical moment of the race, the turning
+                        point. As he passes in front of the white turning post the tension reaches its peak, as is
+                        apparent from the leaning forward of his body and the vigorous movement of the horses, with
+                        rearing forelegs and flaring nostrils.
+                    </p>
+                    <p>The turning post (kampter, nyssa), where the chariot rounded the turn, was the place where
+                        accidents most often occurred, since the charioteers jockeyed for the inside position in order
+                        to gain ground on their opponents.
+                    </p>
+                    <p>C. Avronidaki
+                    </p>
+                    <p>O. Tzachou-Alexandri (ed.), Mind and Body. Athletic Contests in Ancient Greece (Athens 1989)
+                        294-295 no. 183 (E. Kakarouga-Stassinopoulou)
+                    </p>-->
+                </div>
+            </article>
+            <article class="content__article" id="content-5">
+                <h2 class="heading gsap-landing">
+                    <span data-splitting="" style="font-size:35px!important;">Χάλκινο στεφάνι με φύλλα και τμήμα κλάδου ελιάς
+                    </span> <span data-splitting="">
+                    </span>
+                </h2>
+                <div class="content__text gsap-landing">
+                    <div class="hover-img5"></div>
+                    <p> <br> • Κειμενολεζάντα / Τίτλος: Αττική μελανόμορφη οινοχόη με σκηνή αρματοδρομίας
+                        <br> • Εφορεία Αρχαιοτήτων Ηλείας
+                        <br> • Μουσείο: Μουσείο της Ιστορίας των Ολυμπιακών Αγώνων της Αρχαιότητας, αρ. Ευρ.  Br 12132, Br. 0505, Β 6435, Br 0510
+                        <br> • Χρονολογία: Κλασική περίοδος
+                        <br> • Διαστάσεις: 
+                        Br 12132 Μ. (μεγ. σωζόμενο) 0,22 μ. Πλ. (μεγ)  0,069 μ. Παχ. 0,014 μ.
+Br 0505 Μ. (μεγ. σωζόμενο) 0,112 μ. Πλ. (μεγ) 0,034 μ. Παχ. 0,003 μ. 
+Β 6435 Μ. (μεγ. σωζόμενο) 0,121 μ. Πλ. (μεγ) 0,029 μ. Παχ. 0,002 μ.
+Br 0510 Μ. (μεγ. σωζόμενο) 0,094 μ. Πλ. (μεγ.) 0.025 μ. Παχ. 0,002 μ.
+                        <br> • Υλικό: Χαλκός
+                        <br> • Προέλευση: Ολυμπία - Άλτις
+                    </p>
+                    <p> Δεκαοχτώ χάλκινα φύλλα ελιάς και ένα τμήμα κλάδου ελιάς, τα οποία συνθέτουν χάλκινο στεφάνι. Πρόκειται για ένα στεφάνι από πολλά παρόμοια που είχαν αφιερωθεί στο ιερό του Δία. Τα φύλλα ελιάς είτε μεμονωμένα είτε ως τμήματα κλαδιού ελιάς ήταν αναθήματα (αφιέρωματα) στον Δία. Μερικά έχουν χαραγμένη επάνω τους την επιγραφή «ΔΙΟΣ».                    
+                    </p>
+                    <p>Σπαθάρη, Ελ. (Επιμ.), (2008). Αρχαία Ολυμπία (ψηφιακή έκδοση).
+                        <br><br>
+                    Χατζή, Γ. (2008). Το Αρχαιολογικό Μουσείο Ολυμπίας, σσ. 191,   Αθήνα:Κοινωφελές Ίδρυμα Ιωάννη Σ. Λάτση.
+                    </p>
+                </div>
+            </article>
+            <article class="content__article" id="content-6">
+                <h2 class="heading gsap-landing">
+                    <span data-splitting="" style="font-size:35px!important;">Χάλκινο στεφάνι με φύλλα και τμήμα κλάδου ελιάς
+                    </span> <span data-splitting="">
+                    </span>
+                </h2>
+                <div class="content__text gsap-landing">
+                    <div class="hover-img6"></div>
+                    <p> <br> • Κειμενολεζάντα / Τίτλος: Αναθηματικό ανάγλυφο
+                        <br> • Μουσείο: Αθήνα, Εθνικό Αρχαιολογικό Μουσείο, αρ. ευρ. ΕΑΜ Γ 3344
+                        <br> • Χρονολογία: Περ. 460 π.Χ.
+                        <br> • Διαστάσεις: Ύψ. 0,61 μ. Πλ. 0,495 μ.
+                        <br> • Υλικό: Πεντελικό μάρμαρο
+                        <br> • Προέλευση: Σούνιο, κοντά στο ναό της Αθηνάς
+                    </p>
+                    <p>Παριστάνεται όρθιος, γυμνός νέος, με το κεφάλι προς τα αριστερά. Τα μαλλιά του, δεμένα με ταινία, πέφτουν κυματιστά στον αυχένα. Με το δεξί του χέρι τοποθετεί στο κεφάλι του μετάλλινο στεφάνι, το οποίο στερεωνόταν στις οπές που διακρίνονται στα μαλλιά του. Το ανάγλυφο ίσως αποτελεί το ανάθημα (αφιέρωμα) ενός νικητή σε ναυτικούς αγώνες με τριήρεις (πολεμικά πλοία), που τελούνταν από τον 5ο αι. π.Χ. κατά τη διάρκεια της αθηναϊκής εορτής των Παναθηναίων στον Πειραιά και το Σούνιο. 
+                    </p>
+                    <p>Lullies, R. & Hirmer, M. (1960). Greek Sculpture, pp.70-71, pl. 96, London.                        
+                        <br><br>
+                        Ridgway, B. S. (1970). The Severe Style in Greek Sculpture, pp. 49-50, fig.70, Princeton: Princeton University Press.           
+                    </p>
+                </div>
+            </article>
+            <article class="content__article" id="content-7">
+                <h2 class="heading gsap-landing">
+                    <span data-splitting="" style="font-size:35px!important;">Χάλκινο στεφάνι με φύλλα και τμήμα κλάδου ελιάς
+                    </span> <span data-splitting="">
+                    </span>
+                </h2>
+                <div class="content__text gsap-landing">
+                    <div class="hover-img7"></div>
+                    <p> <br> • Κειμενολεζάντα / Τίτλος: Τμήμα πλάκας με ανάγλυφη παράσταση φτερωτής Νίκης, η «Σανδαλίζουσα»
+                        <br> • Μουσείο: Μουσείο Ακρόπολης, Ακρ. 973
+                        <br> • Χρονολογία: Περ. 410 π.Χ.
+                        <br> • Διαστάσεις: Ύψ. 1,06 μ. Μ. 0,52 μ.
+                        <br> • Υλικό: Μάρμαρο Πεντέλης
+                        <br> • Προέλευση: Ακρόπολη της Αθήνας, κοντά στον Ναό της Αθηνάς Νίκης. Βρέθηκε το 1835.
+                    </p>
+                    <p>Η φτερωτή θεά λυγίζει το δεξί πόδι για να τακτοποιήσει το σανδάλι της ή να το λύσει ώστε να πατήσει με γυμνά πόδια τον ιερό χώρο του ναού. Η μορφή εντυπωσιάζει με την πρωτότυπη κίνησή της και τη λεπτομερή απόδοση της ανατομίας του σώματος που διαγράφεται  κάτω από τον διάφανο, σαν βρεγμένο, χιτώνα της.             
+                    </p>
+                    <p>Η πλάκα αυτή, έργο πιθανώς του γλύπτη Αγοράκριτου, εκπροσωπεί με τον καλύτερο τρόπο τη γλυπτική του τέλους του 5ου αιώνα π.Χ., τον λεγόμενο «πλούσιο ρυθμό».
+                    </p>
+                </div>
+            </article>
+            <article class="content__article" id="content-8">
+                <h2 class="heading gsap-landing">
+                    <span data-splitting="" style="font-size:35px!important;">Ερυθρόμορφη οινοχόη με παράσταση Νίκης σε βωμό
+                    </span> <span data-splitting="">
+                    </span>
+                </h2>
+                <div class="content__text gsap-landing">
+                    <div class="hover-img8"></div>
+                    <p> <br> • Κειμενολεζάντα / Τίτλος: Ερυθρόμορφη οινοχόη με παράσταση Νίκης σε βωμό
+                        <br> • Εφορεία Αρχαιοτήτων πόλης Αθηνών
+                        <br> • Μουσείο: Μουσείο Αρχαίας Αγοράς, αρ. ευρ. P 15010
+                        <br> • Χρονολογία: Περ. 490 – 480 π.Χ.
+                        <br> • Διαστάσεις: Ύψ.  0,187 μ.  Διάμ. 0,143 μ.
+                        <br> • Υλικό: Πηλός
+                        <br> • Προέλευση: Ανασκαφές Αρχαίας Αγοράς
+                    </p>
+                    <p>Η φτερωτή θεά λυγίζει το δεξί πόδι για να τακτοποιήσει το σανδάλι της ή να το λύσει ώστε να πατήσει με γυμνά πόδια τον ιερό χώρο του ναού. Η μορφή εντυπωσιάζει με την πρωτότυπη κίνησή της και τη λεπτομερή απόδοση της ανατομίας του σώματος που διαγράφεται  κάτω από τον διάφανο, σαν βρεγμένο, χιτώνα της.             
+                    </p>
+                    <p>Η πλάκα αυτή, έργο πιθανώς του γλύπτη Αγοράκριτου, εκπροσωπεί με τον καλύτερο τρόπο τη γλυπτική του τέλους του 5ου αιώνα π.Χ., τον λεγόμενο «πλούσιο ρυθμό».
+                    </p>
+                </div>
+            </article>
+            <article class="content__article" id="content-9">
+                <h2 class="heading gsap-landing"> <span data-splitting="" style="font-size: 30px;">Ερυθρόμορφος κρατήρας με παράσταση βράβευσης αθλητή</span>
+                    <span data-splitting="" style="font-size:60px!important; margin-top: 10PX;">
+                    </span>
+                    <span data-splitting="">
+                    </span>
+                </h2>
+                <div class="content__text gsap-landing">
+                    <div class="hover-img9">
+                    </div>
+                    <p> <br> • Κειμενολεζάντα / Τίτλος: Ερυθρόμορφος κρατήρας με παράσταση βράβευσης αθλητή
+                        <br> • Εφορεία Αρχαιοτήτων Δυτικής Αττικής
+                        <br> • Αρχαιολογική Συλλογή Αχαρνών, αρ. ευρ. ΜΜ 433
+                        <br> • Χρονολογία: Περ. 470 – 460 π.Χ.
+                        <br> • Διαστάσεις: Ύψ. 0,46 μ. Διαμ. χείλους 0,35 μ.
+                        <br> • Υλικό: Πηλός
+                        <br> • Προέλευση: Αχαρνές, περιοχή Μονομάτι
+                    </p>
+                    <p>Στην κύρια όψη του αγγείου δύο Νίκες, μία με φτερά και μία άπτερος, κινούνται προς νεαρό άνδρα κρατώντας ταινίες. Ο νέος παριστάνεται γυμνός και κρατά ακόντιο. Η παράσταση αναγνωρίζεται ως σκηνή βράβευσης αθλητή, νικητή στο αγώνισμα του ακοντίου.
+                    </p>
+                    <p>Στη δευτερεύουσα όψη του αγγείου, που σώζεται αποσπασματικά, παριστάνονται δύο άνδρες να συνομιλούν. Ο γενειοφόρος άνδρας που στηρίζεται σε βακτηρία ταυτίζεται με προπονητή ή αθλοθέτη και ο νέος, που κρατά ραβδί, με αθλητή.
+                    <br><br>
+                    Πλάτωνος-Γιώτα, M. (2000). ΑΔ 55, Α, σσ. 113-142.                     
+                    </p>
+                    </p>
+                </div>
+            </article>
+            <article class="content__article" id="content-10">
+                <h2 class="heading gsap-landing"> <span data-splitting="" style="font-size: 30px;">Μελανόμορφος αμφορέας με παράσταση επινίκου εορτασμού<span>
+                    <span data-splitting="" style="font-size:60px!important; margin-top: 10PX;">
+                    </span>
+                    <span data-splitting="">
+                    </span>
+                </h2>
+                <div class="content__text gsap-landing">
+                    <div class="hover-img10">
+                    </div>
+                    <p> <br> • Κειμενολεζάντα / Τίτλος: Μελανόμορφος αμφορέας με παράσταση επινίκου εορτασμού
+                        <br> • Μουσείο: Αθήνα, Εθνικό Αρχαιολογικό Μουσείο, αρ. ευρ. Α 485
+                        <br> • Αρχαιολογική Συλλογή Αχαρνών, αρ. ευρ. ΜΜ 433
+                        <br> • Χρονολογία: Περ. 450 – 425 π.Χ.
+                        <br> • Διαστάσεις: Ύψ.  0,257 μ. Διάμ. χείλους  0,11 μ. Διάμ. βάσης 0,1 μ.
+                        <br> • Υλικό: Πηλός
+                        <br> • Προέλευση: Πειραιάς, Αγορά
+                    </p>
+                    <p>Ο στεφανωμένος νικητής αθλητής κρατά φυλλοφόρα κλαδιά, ενώ οι ταινίες της νίκης είναι δεμένες στα χέρια του. Πλάι του βρίσκεται ο κήρυκας που αναγγέλλει τη νίκη. Μικρές στιγμές ξεκινούν από το ανοικτό του στόμα αποδίδοντας τα λόγια του. Πίσω από τον κήρυκα ξεκινά μεγάλη πομπή, στην κορυφή της οποίας στέκει αυλητής, ακολουθούμενος από πέντε λυριστές. Στο έδαφος ανάμεσά τους βρίσκονται δύο υδρίες, προφανώς χάλκινα έπαθλα του αγώνα που προηγήθηκε, και ένα παιδάκι, γονατισμένο καταγής.
+                    </p>
+                    <p>Πίσω από τον τελευταίο λυριστή στέκουν ένας αξιωματούχος, που κρατά βακτηρία από ακατέργαστο ξύλο με καμπύλη λαβή, και ένας ακόμη αυλητής. Τελευταίος βαδίζει ο βραβέας, κουβαλώντας στον ώμο τα έπαθλα για τον νικητή, έξι μεγάλα κλαδιά φοίνικα. Πίσω του, στο έδαφος, υπάρχει μία ακόμη υδρία-έπαθλο. Ο αξιωματούχος που κλείνει τη σκηνή κρατά επίσης έξι κλαδιά φοίνικα και στηρίζεται σε ραβδί.
+                    <br><br>
+                    Αβρονιδάκη, X. (2007). Βοιωτικά επινίκια: ο αμφορέας αρ. ευρ. 485 του Εθνικού Αρχαιολογικού Μουσείου,  ΑΕ , σσ. 131-146.                 
+                    </p>
+                    </p>
+                </div>
+            </article>
+            <article class="content__article" id="content-11">
+                <h2 class="heading gsap-landing"> <span data-splitting="" style="font-size: 30px;">Λίθινη βάση με πέλμα χάλκινου ανδριάντα αθλητή<span>
+                    <span data-splitting="" style="font-size:60px!important; margin-top: 10PX;">
+                    </span>
+                    <span data-splitting="">
+                    </span>
+                </h2>
+                <div class="content__text gsap-landing">
+                    <div class="hover-img11">
+                    </div>
+                    <p> <br> • Κειμενολεζάντα / Τίτλος: Λίθινη βάση με πέλμα χάλκινου ανδριάντα αθλητή
+                        <br> • Μουσείο: Μουσείο της Ιστορίας των Ολυμπιακών Αγώνων της Αρχαιότητας, αρ. ευρ. Br 2772+ M 889 + K 1068
+                        <br> • Εφορεία Αρχαιοτήτων Ηλείας
+                        <br> • Χρονολογία: Τέλη 3ου αι. π.Χ.
+                        <br> • Διαστάσεις:
+                        <br>
+                        Ύψ. σωζόμενης πλίνθου 0,162 μ. Πλ. πλίνθου 0,652 μ. 
+                        <br>
+                        Μ. ποδιού 0,295 μ. Πλ. ποδιού 0,115 μ. Παχ. ποδιού 0,004 – 0,005 μ.
+                        <br> • Υλικό: Χαλκός και λίθος
+                        <br> • Προέλευση: Ολυμπία, Άλτις
+                    </p>
+                    <p>Βάση αγάλματος αθλητή, νικητή σε αγώνες. Στην επάνω επιφάνεια σώζεται το δεξί πέλμα του χάλκινου αγάλματος πακτωμένου στην πλίνθο με μολυβδοχόηση. Ίσως ανήκε στον γνωστό αθλητή Κάπρο, παλαιστή και παγκρατιαστή. Στο μέσο του πλάτους της βάσης διατηρείται αγκώνας (προεξοχή) που προφανώς χρησιμοποιήθηκε για την ανύψωση και τοποθέτησή της. Στη θέση του αριστερού ποδιού σώζεται ο τόρμος για την υποδοχή του εμβόλου.
+                    </p>
+                    <p> Η διάταξη δείχνει έντονη κίνηση που προδίδει άγαλμα νικητή στο παγκράτιο ή την πάλη. Βρέθηκε περίπου στην περιοχή του ιερού όπου ο Παυσανίας (Ολυμπία-Άλτις, VI, 15, 10) είδε δύο ανδριάντες του Κάπρου. Ο Ηλείος Κάπρος, γιος του Πυθαγόρα, πήρε το στεφάνι της νίκης την ίδια μέρα για πάλη και παγκράτιο, κατά την εκατοστή τεσσαρακοστή δεύτερη ολυμπιάδα (212 π.Χ.) νικώντας τον Θηβαίο Κλειτόμαχο.
+                    <br><br>
+                    Furtwängler, A. (1890). Die Bronzen und die übrigen kleineren Funde von Olympia, Olympia IV 3.3α, pp. 11, pl. ΙΙΙ.
+                    <br><br>
+                    Παπαχατζής, Ν. (1982). Παυσανίου Ελλάδος περιήγησις. Μεσσηνιακά-Ηλιακά, σσ. 357, Αθήνα: Εκδοτική Αθηνών                
+                    </p>
+                    </p>
+                </div>
+            </article>
+            <article class="content__article" id="content-12">
+                <h2 class="heading gsap-landing"> <span data-splitting="" style="font-size: 30px;">Ενεπίγραφη αναθηματική βάση νικητή ιππικών αγώνων<span>
+                    <span data-splitting="" style="font-size:60px!important; margin-top: 10PX;">
+                    </span>
+                    <span data-splitting="">
+                    </span>
+                </h2>
+                <div class="content__text gsap-landing">
+                    <div class="hover-img12">
+                    </div>
+                    <p> <br> • Κειμενολεζάντα / Τίτλος: Ενεπίγραφη αναθηματική βάση νικητή ιππικών αγώνων
+                        <br> • Μουσείο: Αθήνα, Επιγραφικό Μουσείο, αρ. ευρ. ΕΜ 8798
+                        <br> • Εφορεία Αρχαιοτήτων Ηλείας
+                        <br> • Χρονολογία: Τέλη 4ου αι. π.Χ.– αρχές 3ου αι. π.Χ.
+                        <br> • Διαστάσεις: Ύψ. 0,20 μ. Μ. 0,545 μ. Παχ. 0,20 μ.
+                        <br> • Υλικό: Πεντελικό μάρμαρο
+                        <br> • Προέλευση: Αθήνα, Οδός Αδριανού
+                    </p>
+                    <p>Ενεπίγραφη ορθογώνια βάση αγάλματος, στην οποία σώζεται επιγραφή 6 στίχων: 
+                    </p>
+                    <p>δόξα μὲν Ἑλλήνων ἱεροῖς ἀναθήμασιν αὔξει <br>
+                        τόνδε, τέχνης δ’ εἰκὼν ἥδε δίδωσ[ι] κρίσιν̣. <br>
+                        νικήσας δὲ ἵππων τε δρόμοις ἔργων τε ἐν ἁμίλλα[ις]  τὴν ἱερὰν στεφανοῖ πατρίδα Κεκροπίαν. 
+                         <br><br>
+                        vacat 0,04 <br>
+                        Ἰλίεια Κλάρια Ἐφέσει[α] <br>
+                        συνωρίδ[ι] ἵππωι ἵππω[ι].<br>              
+                    </p>
+                    <p>
+                        Πρόκειται για ανάθεση χαμένου σήμερα αγάλματος από νικητή-αθλητή και γλύπτη.  Σύμφωνα με την επιγραφή ο αναθέτης νίκησε σε ιπποδρομία και σε διαγωνισμό γλυπτικής. Το όνομα του γλύπτη δεν έχει σωθεί και θα αναγραφόταν πάνω από το επίγραμμα. Στην επιγραφή αναφέρεται ότι τα αναθήματα αύξησαν τη φήμη του  αναθέτη μεταξύ των Ελλήνων και το άγαλμα αποτελεί απόδειξη της τέχνης του. Στη συνέχεια αναφέρονται οι τρεις αγώνες στους οποίους ο αθλητής νίκησε στα αγωνίσματα της συνωρίδας, δηλαδή αρματοδρομίας με ζεύγος αλόγων και των ιππικών αγώνων.
+                    </p>
+                    <p><br><br>
+                        Attic Inscriptions Online IG II34, 590. 
+                        <br><br>
+                        Davies, J. (1971). Athenian  Propertied Families 600-300 BC., 595, D 21, Oxford: Clarendon Press.
+                        <br><br>
+                        IG II23138= ΙG II/III34,1, 590. 
+                        <br><br> 
+                        Κουμανούδης, Στ. (1883). ΑΕ, σσ. 22- 24. 
+                        <br><br>
+                        Hansen, Μ.P. (1983/89) Carmina Epigraphica Graeca II, no.778, 190. 
+                        <br><br>
+                        Moretti, L. (1953). Iscrizioni agonistiche greche, pp. 161, 212- 213, Roma : A. Signorelli.
+                    </p>
+                </div>
+            </article>
+            <article class="content__article" id="content-13">
+                <h2 class="heading gsap-landing"> <span data-splitting="" style="font-size: 35px;">Ενεπίγραφο βάθρο χάλκινου αγάλματος                    <span>
+                    <span data-splitting="" style="font-size:60px!important; margin-top: 10PX;">
+                    </span>
+                    <span data-splitting="">
+                    </span>
+                </h2>
+                <div class="content__text gsap-landing">
+                    <div class="hover-img13">
+                    </div>
+                    <p> <br> • Κειμενολεζάντα / Τίτλος: Ενεπίγραφο βάθρο χάλκινου αγάλματος
+                        <br> • Μουσείο: Αρχαιολογικό Μουσείο Αρχαίας Μεσσήνης, αρ. ευρ. 11693
+                        <br> • Εφορεία Αρχαιοτήτων Μεσσηνίας 
+                        <br> • Χρονολογία: Περ. 3ος – 2ος αι. π.Χ.
+                        <br> • Διαστάσεις: Ύψ. 0,135 μ. Μ. σωζόμενο 0,675 μ. Πλ. 0,73 μ.
+                        <br> • Υλικό: Μάρμαρο
+                        <br> • Προέλευση: Αρχαία Μεσσήνη 
+                    </p>
+                    <p>Το ενεπίγραφο βάθρο χάλκινου αγάλματος, ήταν αρχικά στημένο στο θέατρο της πόλης. Φέρει την επιγραφή «Πολυκλή Λυσάνδρου νικήσαντα [- - -] Ολύμπια, Λύκαια, ο δάμος ανέ [θηκεν]» προς τιμή του Πολυκλή, υιού του Λυσάνδρου, που είχε νικήσει στα Ολύμπια και στα Λύκαια.
+                    </p>
+                    <p>Τα Λύκαια και κυρίως τα Ολύμπια ήταν δύο σημαντικές αθλητικές διοργανώσεις του αρχαίου κόσμου που λάμβαναν χώρα η μία στην αρχαία Ολυμπία, γενέτειρα των αρχαίων Ολυμπιακών Αγώνων, και η άλλη στο Λύκαιο Όρος στην  Αρκαδία.            
+                    </p>
+                    <p>Το ενεπίγραφο βάθρο, υποδηλώνει τη σημασία που είχε ο αθλητισμός στην κοινωνία της αρχαίας Μεσσήνης και γενικότερα στην κοινωνία του αρχαίου ελληνικού κόσμου. 
+                    </p>
+                    <p>Θέμελης, Π. (2001) Ανασκαφή Μεσσήνης στο: Πρακτικά της Εν Αθήναις Αρχαιολογικής Εταιρείας, σσ. 81, Αθήνα.  Ανακτήθηκε 16 ιουλίου, 2022, από: 
+                        <br><br>
+                        <a href="https://www.academia.edu/31959740/P_Themelis_Excavation_in_Messene_2001_PAE_2001_pdf" style="color: rgb(46, 46, 46);">PDF link</a>
+                    </p>
+                </div>
+            </article>
+            <article class="content__article" id="content-14">
+                <h2 class="heading gsap-landing"> <span data-splitting="" style="font-size: 40px;">Αναθηματικό ανάγλυφο με παράσταση αθλητή                   <span>
+                    <span data-splitting="" style="font-size:60px!important; margin-top: 10PX;">
+                    </span>
+                    <span data-splitting="">
+                    </span>
+                </h2>
+                <div class="content__text gsap-landing">
+                    <div class="hover-img14">
+                    </div>
+                    <p> <br> • Κειμενολεζάντα / Τίτλος: Αναθηματικό ανάγλυφο με παράσταση αθλητή
+                        <br> • Μουσείο: Αρχαιολογικό Μουσείο Κω, αρ. ευρ. Γ 3101
+                        <br> • Εφορεία Αρχαιοτήτων Δωδεκανήσου 
+                        <br> • Χρονολογία: Περ. 230 π.Χ.
+                        <br> • Διαστάσεις: Ύψ. 2,00 μ. Πλ. 0,73 μ.
+                        <br> • Υλικό: Λευκό μάρμαρο
+                        <br> • Προέλευση: Kως, αρχαίο θεάτρο 
+                    </p>
+                    <p>Ο αθλητής φοράει μακρύ ιμάτιο που αφήνει ακάλυπτο το πάνω μέρος του σώματος και συγκρατείται εν είδει κόμπου στον αριστερό αγκώνα. Με τα δυο του χέρια κρατά στεφάνι ελιάς, σύμβολο της νίκης του σε αθλητικούς αγώνες. Τα χείλη, σαρκώδη και ανοιχτά σε χαμόγελο, προσδίδουν στο πρόσωπο μια έκφραση ελαφράς περιφρόνησης. Με βάση την απόδοση της μύτης και των αυτιών  πρόκειται πιθανόν πυγμάχο Τα χαραγμένα στο στήθος γράμματα «ΔΑΙΔ» μαρτυρούν την καταγωγή του από την πόλη Δαίδαλα της Λυκίας  στην απέναντι μικρασιατική ακτή, που αποτελούσε τμήμα της Ροδιακής Περαίας.
+                    </p>
+                    <p>
+                    Kabus-Preisshofen, R. (1989). Die Hellenistische Plastic der Insel Kos, pp. 45, 102, 108-11, 113, 188-191, no. cat. 20, pl. 30-31.
+                    </p>
+                    <p>
+                    Laurenzi, L. (1938). Clara Rhodos IX, pp. 85-89, fig. 53-55, pl. VIII. 
+                    </p>
+                    <p>
+                    Linfert, A. (1976). Kunst zentren hellenistischer Zeit: Studien an weiblichen Gewand figuren, pp. 79, pl. 31, fig. 161-162.
+                    </p>
+                    <p>
+                    Queyrel, Fr. (2020). La sculpture hellénistique II. Royaumes et cites, pp. 135-136, 354, fig. 167, Paris: Éditions Hermann. 
+                    </p>
+                </div>
+            </article>
+            <article class="content__article" id="content-15">
+                <h2 class="heading gsap-landing"> <span data-splitting="" style="font-size: 40px;">Ενεπίγραφος υλινδρικός βωμίσκος
+                    <span>
+                    <span data-splitting="" style="font-size:60px!important; margin-top: 10PX;">
+                    </span>
+                    <span data-splitting="">
+                    </span>
+                </h2>
+                <div class="content__text gsap-landing">
+                    <div class="hover-img15">
+                    </div>
+                    <p> <br> • Κειμενολεζάντα / Τίτλος: Ενεπίγραφος υλινδρικός βωμίσκος
+                        <br> • Μουσείο: Αθήνα, Επιγραφικό Μουσείο, αρ. ευρ. ΕΜ 137
+                        <br> • Χρονολογία: Περ. 2ος αι. μ.Χ.
+                        <br> • Διαστάσεις: Υψ. 0,22 μ. Διαμ. 0,15 – 0,17 μ.
+                        <br> • Υλικό: Μάρμαρο Πεντέλης
+                        <br> • Προέλευση: Αθήνα, δυτικά του ιερού του Ολυμπίου Δία
+                    </p>
+                    <p>Κυλινδρικός αναθηματικός βωμίσκoς, που σώζει την επιγραφή:
+                    </p>
+                    <p>
+                        «Καρπίων <br>
+                        ἀνέθηκε <br>
+                        τῇ Νείκῃ <br>
+                        εὐχὴν <br>
+                        μετὰ ΣΥΝ <br>
+                        ΦΑΙΡΟΝΤΑΙΣ» <br>
+                    </p>
+                    <p>
+                        Ο Καρπίων προσφέρει αυτό το ανάθημα στην Νίκη, πιθανώς ως ευχαριστήριο για την νίκη του σε κάποιον αγώνα και μετά την εκπλήρωση κάποιου  τάματος, όπως δείχνει η λέξη «εὐχήν». Η θεά Νίκη ως προσωποποίηση της ιδέας της νίκης εξυμνείται συχνά από τους αρχαίους συγγραφείς, ενώ αναθήματα σε αυτήν μαρτυρούνται σε  αρκετές επιγραφές του Ελλαδικού χώρου και της Μ. Ασίας. Στις αττικές επιγραφές το προσωνύμιο Νίκη αποδίδεται στη θεά Αθηνά. 
+                    </p>
+                    <p>
+                        Attic Inscriptions On Line 
+                        <br><br>
+                        IG II24794 = IG II34.1, 620. 
+                        <br><br>
+                        IG II34 620. 
+                        <br><br>
+                        Νικολαΐδης, Γ. (1990) ΠΑΕ, 30.
+                    </p>
+                    <p>
+                        Schörner, G. (2003). Votive in Römischen Griechenland, Untersuchungen  zur späthellenistischen und kaiserzeitlichen Kunst- und  Religionsgeschichte, Altertumswissenschaftliches Colloquium 7, no. 58,  Stuttgart
+                    </p>
+                    <p>
+                        Threatte, L. (1980). The Grammar of Attic Inscriptions, Vol. I, 199-201 & Vol. 2, 7, Berlin - N. York: De Gruyter.
+                    </p>
+                </div>
+            </article>
+            <article class="content__article" id="content-16">
+                <h2 class="heading gsap-landing"> <span data-splitting="" style="font-size: 40px;">Επιτύμβιο ανάγλυφο εφήβου
+                    <span>
+                    <span data-splitting="" style="font-size:60px!important; margin-top: 10PX;">
+                    </span>
+                    <span data-splitting="">
+                    </span>
+                </h2>
+                <div class="content__text gsap-landing">
+                    <div class="hover-img16">
+                    </div>
+                    <p> <br> • Κειμενολεζάντα / Τίτλος: Ενεπίγραφος υλινδρικός βωμίσκος
+                        <br> • Μουσείο: Αρχαιολογικό Μουσείο Θεσσαλονίκης, αρ. ευρ. ΜΘ 1213
+                        <br> • Χρονολογία: Περ. 3ος αι. μ.Χ.
+                        <br> • Διαστάσεις: Ύψ. 0,39 μ.  Πλ. 2,75 μ.
+                        <br> • Υλικό: Μάρμαρο
+                        <br> • Προέλευση: Θεσσαλονίκη, Μεβλέ – Χανέ
+                    </p>
+                    <p>Μαρμάρινο επιτύμβιο ανάγλυφο με παράσταση εφήβου που φέρει ιμάτιο και έπαθλα νίκης σε αθλητικούς αγώνες. Δεξιά εικονίζεται αμφορέας και αριστερά κλαδί φοίνικα, πάνω στο οποίο υπάρχει στεφάνι, όλα δηλωτικά σύμβολα νίκης. Η πλάκα διατηρεί ίχνη χρώματος. Κάτω από την παράσταση διαβάζεται επιγραφή με το όνομα του νεκρού και της μητέρας του που ιδρύει το μνημείο. Και οι δύο ήταν Ρωμαίοι πολίτες:
+                    </p>
+                    <p>
+                        «Εἰγνατία Κλαυδίῳ <br>
+                        Οὐάλητι τῷ τέκνῳ <br>
+                        μνήμης χάριν.» <br>
+                    </p>
+                    <p>
+                        IG X, II 1, *729.  
+                    </p>
+                    <p>
+                        Δεσπίνης, Γ., Στεφανίδου-Τιβερίου, Θ. & Βουτυράς, Εμμ. (Επιμ.), (2003). Κατάλογος Γλυπτών του Αρχαιολογικού Μουσείου Θεσσαλονίκης, ΙΙ, αρ. κατ. 320, Θεσσαλονίκη:  Μορφωτικό Ίδρυμα Εθνικής Τραπέζης.
+                    </p>
+                    <p>
+                        Smith, R.R.R., (1998). Cultural choice and political identity in honorific portrait statues in the Greek East in the 2nd c. A.C., JRS 88, pp. 63, 65-66.
+                    </p>
+                    <p>
+                        Van Nijf, O. (1999). Athletics, festivals and Greek identity in the Roman East, PCPS- Proceedings of the Cambridge Philological Society  45, PP. 190-193.
+                    </p>
+                </div>
+            </article>
+
+
+
+
+            <div class="back-button-place content__back"></div>
+        </section>
+    </main>
+    <svg class="cursor" width="80" height="80">
+        <circle class="cursor__inner" cx="40" cy="40" r="20" />
+    </svg>
+    <div class="transition-page">
+
+    <script src="index.6d569464.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="magneticButton.js"></script>
+    <script src="index.js"></script>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r99/three.min.js"></script>
+    <style>
+        .hover-img {
+            height: 68vh;
+            width: 100%;
+	    margin-bottom: 10%;
+        }
+        .hover-img2 {
+            height: 68vh;
+            width: 100%;
+	    margin-bottom: 10%;
+        }
+        .hover-img3 {
+            height: 68vh;
+            width: 100%;
+	    margin-bottom: 10%;
+        }
+        .hover-img4 {
+            height: 68vh;
+            width: 100%;
+	    margin-bottom: 10%;
+        }
+        .hover-img5 {
+            height: 68vh;
+            width: 100%;
+	    margin-bottom: 10%;
+        }
+        .hover-img6 {
+            height: 68vh;
+            width: 100%;
+	    margin-bottom: 10%;
+        }
+        .hover-img7 {
+            height: 68vh;
+            width: 100%;
+	    margin-bottom: 10%;
+        }
+        .hover-img8 {
+            height: 68vh;
+            width: 100%;
+	    margin-bottom: 10%;
+        }
+        .hover-img9 {
+            height: 68vh;
+            width: 100%;
+	    margin-bottom: 10%;
+        }
+        .hover-img10 {
+            height: 68vh;
+            width: 100%;
+	    margin-bottom: 10%;
+        }
+        .hover-img11 {
+            height: 68vh;
+            width: 100%;
+	    margin-bottom: 10%;
+        }
+        .hover-img12 {
+            height: 68vh;
+            width: 100%;
+	    margin-bottom: 10%;
+        }
+        .hover-img13 {
+            height: 68vh;
+            width: 100%;
+	    margin-bottom: 10%;
+        }
+        .hover-img14 {
+            height: 68vh;
+            width: 100%;
+	    margin-bottom: 10%;
+        }
+        .hover-img15 {
+            height: 68vh;
+            width: 100%;
+	    margin-bottom: 10%;
+        }
+        .hover-img16 {
+            height: 68vh;
+            width: 100%;
+	    margin-bottom: 10%;
+        }
+
+    </style>
+    <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="../pixi.min.js"></script>
+    <script src="../main.js"></script>
+    <script src="../general.js"></script>
+    <script src="../hover.umd.js"></script>
+    <script>
+        function hover(parent, img1, img2) {
+                animation : hoverEffect({
+                parent: document.querySelector(parent),
+                intensity: 0,
+                image1: img1,
+                image2: img2,
+                displacementImage: '../8.jpg',
+                imagesRatio: 1080 / 1920
+            })
+        }
+        hover(".hover-img", "Μικρογραφικός_αναθηματικός_τριποδικός_λέβητας.png", "Μικρογραφικός_αναθηματικός_τριποδικός_λέβητας.png") // SECOND IMAGE // YOU CAN CHANGE IMAGES FROM HERE, NOT ANYWHERE
+        hover(".hover-img2", "Τριποδικός_σφυρήλατος_τρίποδας.png", "Τριποδικός_σφυρήλατος_τρίποδας.png") // THIRD IMAGE
+        hover(".hover-img3", "Αττικός_αμφορέας_με_αντωπά_άλογα_και_τρίποδα.png", "Αττικός_αμφορέας_με_αντωπά_άλογα_και_τρίποδα.png") // LAST IMAGE
+        hover(".hover-img4", "Αττική_τριφυλλόστομη_οινοχόη_με_επιγραφή.png", "Αττική_τριφυλλόστομη_οινοχόη_με_επιγραφή.png")
+        hover(".hover-img5", "Χάλκινο_στεφάνι_με_φύλλα_και_τμήμα_κλάδου_ελιάς__.png", "Χάλκινο_στεφάνι_με_φύλλα_και_τμήμα_κλάδου_ελιάς__.png")
+        hover(".hover-img6", "Αναθηματικό_ανάγλυφο.png", "Αναθηματικό_ανάγλυφο.png")
+        hover(".hover-img7", "Τμήμα_πλάκας_με_ανάγλυφη_παράσταση_φτερωτής_Νίκης.png", "Τμήμα_πλάκας_με_ανάγλυφη_παράσταση_φτερωτής_Νίκης.png")
+        hover(".hover-img8", "Ερυθρόμορφη-οινοχόη-με-παράσταση-Νίκης-σε-βωμό.png", "Ερυθρόμορφη-οινοχόη-με-παράσταση-Νίκης-σε-βωμό.png")
+        hover(".hover-img9", "Ερυθρόμορφος_κρατήρας_με_παράσταση_βράβευσης_αθλητή.png", "Ερυθρόμορφος_κρατήρας_με_παράσταση_βράβευσης_αθλητή.png")
+        hover(".hover-img10", "Μελανόμορφος_αμφορέας_με_παράσταση_επινίκιου_εορτασμού.png", "Μελανόμορφος_αμφορέας_με_παράσταση_επινίκιου_εορτασμού.png")
+        hover(".hover-img11", "Λίθινη_βάση_με_πέλμα_χάλκινου_ανδριάντα_αθλητή.png", "Λίθινη_βάση_με_πέλμα_χάλκινου_ανδριάντα_αθλητή.png")
+        hover(".hover-img12", "Ενεπίγραφη_αναθηματική_βάση_νικητή_ιππικών_αγώνων.png", "Ενεπίγραφη_αναθηματική_βάση_νικητή_ιππικών_αγώνων.png")
+        hover(".hover-img13", "Ενεπίγραφο_βάθρο_χάλκινου_αγάλματος.png", "Ενεπίγραφο_βάθρο_χάλκινου_αγάλματος.png")
+        hover(".hover-img14", "Αναθηματικό_ανάγλυφο_με_παράσταση_αθλητή.png", "Αναθηματικό_ανάγλυφο_με_παράσταση_αθλητή.png")
+        hover(".hover-img15", "Ενεπίγραφος_υλινδρικός_βωμίσκος.png", "Ενεπίγραφος_υλινδρικός_βωμίσκος.png")
+        hover(".hover-img16", "Επιτύμβιο_ανάγλυφο_εφήβου.png", "Επιτύμβιο_ανάγλυφο_εφήβου.png")
+        // hover(".hover-img5", "μικροι-πυγμαχοι.jpg", "μικροι-πυγμαχοι.jpg") // THIS IS FIRST IMAGE
+        </script>
+</body>
+
+</html>

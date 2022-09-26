@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>The Great Competition</title>
+        <meta name="description" content="A grid layout with content preview and a magnetic effect.">
+        <meta name="keywords" content="gsap, 3d, grid, thumbnails, content, preview, front end, css, javascript">
+        <meta name="author" content="Codrops">
+        <link rel="icon shortcut" href="home/favicon.61719396.ico">
+        <link rel="stylesheet" href="https://use.typekit.net/gyf5muf.css">
+        <link rel="stylesheet" href="https://fonts.google.com/specimen/EB+Garamond">
+        <link rel="stylesheet" type="text/css" href="home/index.320bd6f3.css">
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script>
+        ! function() {
+        document.documentElement.className = "js";
+        var e, t;
+        (t = document.createElement("style")).innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e || alert("Please view this demo in a modern browser that supports CSS Variables.")
+        }();
+        jQuery(document).ready(function(){
+            jQuery('.preview__item-button').each(function(){
+                var getUrl = window.location;
+                // var getUrl = window.location.href;
+                var baseUrl = getUrl.origin;
+                var hreff = jQuery(this).attr('href')
+                jQuery(this).attr("href", baseUrl+hreff)
+            })
+        })
+        </script>
+    </head>
+    <body class="loading">
+        <main>
+            <div class="content">
+                <h2 class="content__title"> <span class="content__title-line content__title-line--1" data-splitting="">IMAGE</span> 
+                    <!-- <span class="content__title-line content__title-line--2" data-splitting="">AUGOUST</span>  -->
+                </h2>
+                <div class="grid">
+                    <a href="#preview-1" class="grid__item pos-1" data-title="ΑΠΑΡΧΕΣ">
+                        <div class="grid__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </a>
+                    <a href="#preview-2" class="grid__item pos-2" data-title="ΑΝΑΒΙΩΣΗ">
+                        <div class="grid__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </a>
+                    <a href="#preview-3" class="grid__item pos-3" data-title="ΑΓΩΝΙΣΜΑΤΑ">
+                        <div class="grid__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </a>
+                    <a href="#preview-4" class="grid__item pos-4" data-title="ΤΕΧΝΟΛΟΓΙΑ">
+                        <div class="grid__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </a>
+                    <a href="#preview-5" class="grid__item pos-5" data-title="ΠΕΡΙΗΓΗΣΗ ΣΤΟ ΙΕΡΟ">
+                        <div class="grid__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </a>
+                    <a href="#preview-6" class="grid__item pos-6" data-title="ΒΙΒΛΙΟΓΡΑΦΙΑ">
+                        <div class="grid__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </a>
+                    <a href="#preview-7" class="grid__item pos-7" data-title="ΙΔΕΩΔΗ">
+                        <div class="grid__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </a>
+                    <a href="#preview-8" class="grid__item pos-8" data-title="ΕΠΑΘΛΑ">
+                        <div class="grid__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </a>
+                    <a href="#preview-9" class="grid__item pos-9" data-title="ΓΛΩΣΣΑΡΙ">
+                        <div class="grid__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </a>
+                    <a href="#preview-10" class="grid__item pos-10" data-title="ΣΥΝΤΑΚΤΕΣ">
+                        <div class="grid__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </a>
+                    <a href="#preview-11" class="grid__item pos-11" data-title="ΠΗΓΕΣ">
+                        <div class="grid__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </a>
+                    <!-- <a href="#preview-12" class="grid__item pos-12" data-title="Twinhouse">
+                        <div class="grid__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </a> -->
+                    <!-- <a href="#preview-13" class="grid__item pos-13" data-title="Lonstrian">
+                        <div class="grid__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </a> -->
+                    <a href="#preview-14" class="grid__item pos-14" data-title="ΙΣΤΟΡΙΕΣ">
+                        <div class="grid__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </a>
+                    <a href="#preview-15" class="grid__item pos-15" data-title="ΜΥΘΟΛΟΓΙΑ">
+                        <div class="grid__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </a>
+                    <a href="#preview-16" class="grid__item pos-16" data-title="ΧΡΟΝΟΛΟΓΙΟ">
+                        <div class="grid__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </a>
+                </div>
+                
+            </div>
+        </main>
+        <div class="main-preview">
+            <div class="preview">
+                <div class="preview__item" id="preview-1">
+                    <button class="preview__item-back unbutton"><span>Back</span></button>
+                    <div class="preview__item-imgwrap">
+                        <div class="preview__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </div>
+                    <h2 data-splitting="" class="preview__item-title">ΑΠΑΡΧΕΣ</h2>
+                    <div class="preview__item-content">
+                        <div class="preview__item-meta" style="font-weight: bold;">Αναζητώντας τις απαρχές  / Ίχνη στο χρόνο</div>
+                        <!-- <div class="preview__item-meta"><span>Acapulco, Mexico</span><span>15/05/2025</span></div> -->
+                        <p class="">
+                            Οι απαρχές των αθλητικών αγώνων απηχούν τον καθημερινό αγώνα επιβίωσης των ανθρώπων, την αγωνιώδη προσπάθεια για την εξασφάλιση της τροφής, την προστασία από τους κινδύνους της φύσης, την αναμέτρηση με άγρια ζώα κι επικίνδυνους αντιπάλους.
+                            Στη μακραίωνη προϊστορία τους, οι αγώνες συνδέθηκαν με τελετουργίες για την εξασφάλιση της εύνοιας των θεών και της γονιμότητας της γης –η συνήθεια της στέψης των νικητών με δροσερούς βλαστούς ανάγεται σε αυτές τις γιορτές.
+                        </p>
+                        <p class="">
+                            Συνδέθηκαν συχνά επίσης με την απόδοση τιμών σε κάποιον ηρωικό νεκρό, με τα λεγόμενα άθλα επιτάφια, δηλώνοντας έτσι συμβολικά την υπέρβαση του θανάτου, την αναγέννηση, και τον θρίαμβο της ζωής. 
+                        </p>
+                        <p class="preview__item-description-02">
+                            Πήραν τη μορφή γυμναστικών επιδείξεων για την τέρψη του κοινού, κυρίως των ανώτερων τάξεων, με θεάματα όπως ακροβασίες, πάλη, πυγμή, παιχνίδια σφαίρας, κι αργότερα εντυπωσιακές αναμετρήσεις με άλογα και άρματα. 
+                            Έγιναν αναπόσπαστο κομμάτι της παιδείας, ώστε οι νέοι να γίνουν ρωμαλέοι και τολμηροί προστάτες της κοινότητας. 
+
+                        </p>
+                        <p class="preview__item-description-03">
+                            Στοιχεία από αυτές τις παραδόσεις συγχωνεύονται και μετασχηματίζονται στους σκοτεινούς αιώνες. Στα αρχαϊκά χρόνια, το αγωνιστικό ιδεώδες εμφανίζεται ισχυρότερο από ποτέ, όχι πια ως απλές αθλοπαιδιές, αλλά ως ιερές διοργανώσεις όπου επικρατεί η άμιλλα, καθώς και η επιθυμία για την κατάκτηση της νίκης, αφού η υπεροχή αποτελεί ένδειξη της εύνοιας των θεών και δόξα της πόλης. Κι ακόμα, οι αγώνες, ειδικά οι πανελλήνιοι, συνθέτουν έναν πολύτιμο, λαμπρό κρίκο στους δεσμούς μεταξύ των Ελλήνων. 
+                        </p>
+                        <a href="/Subcategory - Landing Page/απαρχες/aπαρχές.html" class="preview__item-button">Περισσότερα</a>
+                    </div>
+                </div>
+                <div class="preview__item" id="preview-2">
+                    <button class="preview__item-back unbutton"><span>Back</span></button>
+                    <div class="preview__item-imgwrap">
+                        <div class="preview__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </div>
+                    <h2 data-splitting="" class="preview__item-title">ΑΝΑΒΙΩΣΗ</h2>
+                    <div class="preview__item-content">
+                        <div class="preview__item-meta" style="font-weight: bold;"> Η αναβίωση</div>
+                        <!-- <div class="preview__item-meta"><span>Bangkok, Thailand</span><span>22/02/2025</span></div> -->
+                        <p class="preview__item-description"> Ήδη από την εποχή της Αναγέννησης, πολλοί ήταν εκείνοι που οραματίστηκαν την αναβίωση των ολυμπιακών αγώνων. Στη νεότερη Ελλάδα, ένας από τους πιο ένθερμους υποστηρικτές της ιδέας, ο εύπορος έμπορος της διασποράς Ευάγγελος Ζάππας, χρηματοδοτεί την ανέγερση του Ζαππείου Μεγάρου, το 1888, του πρώτου κτηρίου παγκοσμίως το οποίο κτίστηκε για τις ανάγκες των αγώνων.</p>
+                        <p class="preview__item-description">
+                            Το 1894 διοργανώνεται το συνέδριο του Παρισιού με πρωτοβουλία του γάλλου βαρώνου Pierre de Coubertin. Η ιδέα της πραγματοποίησης διεθνών αθλητικών αγώνων σε διαφορετική χώρα κάθε τέσσερα χρόνια μετουσιώνεται για πρώτη φορά σε επίσημη απόφαση. Έπειτα από πρόταση του έλληνα εκπροσώπου, του λογοτέχνη Δημητρίου Βικέλα, οι πρώτοι σύγχρονοι ολυμπιακοί αγώνες φιλοξενούνται στην Αθήνα το 1896. 
+                        </p>
+                        <p class="preview__item-description" style="font-weight: bold;">
+                            Η αναβίωση των ολυμπιακών αγώνων είναι πλέον γεγονός.
+                        </p>
+                        <p class="preview__item-description">
+                            Η διοργάνωσή τους ανατίθεται στη Διεθνή Ολυμπιακή Επιτροπή (ΔΟΕ), που συστήνεται τότε. Για τη διεξαγωγή τους, το αρχαίο Παναθηναϊκό Στάδιο ξαναχτίζεται εκ βάθρων με πεντελικό μάρμαρο, χάρη στη χορηγία του Γεωργίου Αβέρωφ. 
+Από τότε μέχρι σήμερα έχουν πραγματοποιηθεί συνολικά 31 Ολυμπιάδες σε δεκάδες πόλεις σε όλο τον κόσμο. Εξάλλου, η αναγνώριση της σπουδαιότητας του θεσμού οδήγησε τη ΔΟΕ στην απόφαση να διοργανώσει και Χειμερινούς Ολυμπιακούς Αγώνες, οι οποίοι έγιναν το 1924 για πρώτη φορά.
+                        </p>
+                        <p class="preview__item-description">
+                            Το σύμβολο των σύγχρονων ολυμπιακών αγώνων, οι πέντε χρωματιστοί κύκλοι, παραπέμπει στις πέντε ηπείρους, σηματοδοτώντας την οικουμενικότητα της διοργάνωσης και των ιδανικών της. Το ίδιο και η φλόγα, που μεταφέρει το μήνυμα της ειρήνης και του ευ αγωνίζεσθαι στη διοργανώτρια πόλη, μετά την αφή της στο βωμό της Ήρας, στη γενέτειρα των αγώνων, την αρχαία Ολυμπία.
+                        </p>
+                        <a href="/Subcategory - Landing Page/απαρχες/aπαρχές.html" class="preview__item-button">Περισσότερα</a>
+                    </div>
+                </div>
+                <div class="preview__item" id="preview-3">
+                    <button class="preview__item-back unbutton"><span>Back</span></button>
+                    <div class="preview__item-imgwrap">
+                        <div class="preview__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </div>
+                    <h2 data-splitting="" class="preview__item-title">ΑΓΩΝΙΣΜΑΤΑ</h2>
+                    <div class="preview__item-content">
+                        <div class="preview__item-meta" style="font-weight: bold;"> Τα αγωνίσματα των αρχαίων Ολυμπιακών Αγώνων</div>
+                        <!-- <div class="preview__item-meta"><span>Berlin, Germany</span><span>16/05/2025</span></div> -->
+                        <p class="preview__item-description"> Οι πρώτες 14 Ολυμπιάδες είχαν μόνο ένα αγώνισμα, το στάδιο, που ήταν αγώνας δρόμου μήκους 192,28 μέτρων. Στο πέρασμα των αιώνων το ολυμπιακό πρόγραμμα εμπλουτιζόταν και στην τελική του μορφή έφτασε να περιλαμβάνει 16 αγωνίσματα. Σε αυτά συμμετείχαν μόνο Έλληνες άνδρες, γεννημένοι ελεύθεροι, από ελεύθερους γονείς. Κάθε αγώνισμα είχε τους δικούς του κανόνες. Υπήρχαν ωστόσο και κοινοί κανόνες, όπως η υπακοή στις εντολές, η έγκαιρη άφιξη και η απαγόρευση της δωροδοκίας.</p>
+                        <p class="preview__item-description"> Την ευθύνη της οργάνωσης, της κρίσης των αγώνων και της τήρησης των κανονισμών είχαν οι ελλανοδίκες, αμερόληπτοι, αδέκαστοι και ανεπηρέαστοι κριτές. Κληρώνονταν από τους Ηλείους και είχαν ευρύτατες αρμοδιότητες. Για την άσκηση των καθηκόντων τους είχαν στη διάθεσή τους αστυνομική δύναμη από ραβδούχους ή μαστιγοφόρους με επικεφαλής τον αλυτάρχη.</p>
+                        <!-- <button class="preview__item-info unbutton">+ Info</button> -->
+                        <!-- <button class="preview__item-button">ΠΕΡΙΣΣΟΤΕΡΑ</button> -->
+                        <a href="/Subcategory - Landing Page/απαρχες/aπαρχές.html" class="preview__item-button">Περισσότερα</a>
+                    </div>
+                </div>
+                <div class="preview__item" id="preview-4">
+                    <button class="preview__item-back unbutton"><span>Back</span></button>
+                    <div class="preview__item-imgwrap">
+                        <div class="preview__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </div>
+                    <h2 data-splitting="" class="preview__item-title">ΤΕΧΝΟΛΟΓΙΑ</h2>
+                        <div class="preview__item-content">
+                        <div class="preview__item-meta" style="font-weight: bold;"> Η αρχαία ελληνική τεχνολογία και ο αθλητισμός</div>
+                        <!-- <div class="preview__item-meta"><span>Berlin, Germany</span><span>26/06/2025</span></div> -->
+                        <p class="preview__item-description"> Η σημασία της τεχνολογίας για τους αρχαίους Έλληνες διαφαίνεται από τις μυθολογικές διηγήσεις τους: ο Ήφαιστος, κύριος της φωτιάς και δημιουργός θαυμαστών έργων, εκπροσωπεί την «εμπειρική τεχνική», ενώ η σοφή Αθηνά, προστάτης των γραμμάτων, των τεχνών, αλλά και των τεχνιτών και της χειροτεχνίας, εκφράζει την «έντεχνον σοφίαν».</p>
+                        <p class="preview__item-description"> Η υψηλού βαθμού τεχνολογική σκέψη και εφευρετικότητα των αρχαίων Ελλήνων συνέβαλε σημαντικά στην ανάπτυξη του πολιτισμού τους, πρόσφερε λύσεις και άνοιξε νέους δρόμους σε πολλούς τομείς του καθημερινού βίου, όπως η διαχείριση του νερού και η ναυπηγική, οι τέχνες και οι ποικίλες βιοτεχνικές ασχολίες, η μουσική, η ιατρική, οι πολεμικές μηχανές κ.ά.
+                        </p>
+                        <p class="preview__item-description"> Στους ελληνιστικούς χρόνους δημιουργούνται πλέον όργανα ακριβείας, αυτόματοι μηχανισμοί, ακόμη και όργανα πρόβλεψης αστρονομικών γεγονότων. Το πιο γνωστό ανάμεσά τους είναι ο περίφημος μηχανισμός των Αντικυθήρων του 2ου – 1ου αι. π.Χ. Πρόκειται για ένα τεχνολογικό αριστούργημα, προϊόν ύψιστης ακρίβειας και συνθετότητας, που προϋπέθετε ανεπτυγμένο επίπεδο μαθηματικής και αστρονομικής γνώσης, αλλά και εξίσου ανεπτυγμένο σύστημα κατασκευής και ελέγχου. Θεωρείται ο πρώτος αναλογικός υπολογιστής στην ιστορία της ανθρωπότητας και χρησιμοποιούνταν μεταξύ άλλων για την μέτρηση του χρόνου τέλεσης των Ολυμπιάδων και άλλων αθλητικών αγώνων, όπως τα Πύθια, τα Ίσθμια και τα Νέμεα. 
+                        </p>
+                        <p class="preview__item-description"> Η τεχνολογία χρησιμοποιήθηκε, επίσης, για να δώσει λύσεις σε πρακτικά προβλήματα που σχετίζονταν με τον αθλητισμό, όπως η πρόωρη εκκίνηση σε αγώνες δρόμου και ιπποδρομίες. Οι αρχαίοι μηχανικοί επινόησαν και κατασκεύασαν ένα είδος φραγμού, την ύσπληγα, που υποχρέωνε τους δρομείς να ξεκινήσουν ταυτόχρονα. Ένα είδος ύσπληγος, η ιππάφεση, χρησιμοποιούνταν και στους ιπποδρόμους για τον έλεγχο της μη ταυτόχρονης αλλά δίκαιης εκκίνησης των αλόγων.
+                        </p>
+                        <!-- <button class="preview__item-info unbutton">+ Info</button> -->
+                        <!-- <button class="preview__item-button">ΠΕΡΙΣΣΟΤΕΡΑ</button> -->
+                        <a href="/Subcategory - Landing Page/τεχνολογια/texnologia.html" class="preview__item-button">Περισσότερα</a>
+                    </div>
+                </div>
+                <div class="preview__item" id="preview-5">
+                    <button class="preview__item-back unbutton"><span>Back</span></button>
+                    <div class="preview__item-imgwrap">
+                        <div class="preview__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </div>
+                    <h2 data-splitting="" class="preview__item-title">ΠΕΡΙΗΓΗΣΗ ΣΤΟ ΙΕΡΟ</h2>
+                    <div class="preview__item-content">
+                        <div class="preview__item-meta" style="font-weight: bold;">Μεγαλοπρέπεια χώρου Ολυμπίας</div>
+                        <!-- <div class="preview__item-meta"><span>Lisbon, Portugal</span><span>09/12/2025</span></div> -->
+                        <p class="preview__item-description">«πολλὰ μὲν δὴ καὶ ἄλλα ἴδοι τις ἂν ἐν Ἕλλησι, τὰ δὲ καὶ ἀκούσαι θαύματος ἄξια: μάλιστα δὲ τοῖς Ἐλευσῖνι δρωμένοις καὶ ἀγῶνι τῷ ἐν Ὀλυμπίᾳ μέτεστιν ἐκ θεοῦ φροντίδος.»
+                        «Σίγουρα και άλλα πολλά αξιοθαύμαστα μπορεί κανείς να δει ή και ν΄ακούσει στον τόπο των Ελλήνων. Περισσότερο όμως της Ελευσίνας τα δρώμενα και ο αγώνας της Ολυμπίας έχουν μέσα τους κάτι από τη φροντίδα του θεού» (Παυσανίας 5, 10, 1).
+                        </p>
+                        <p class="preview__item-description">
+                            Άλτις: Η καρδιά του ιερού της Ολυμπίας, το ιερό άλσος που περιλάμβανε τα θρησκευτικά οικοδομήματα, τα τεμένη και τα αναθήματα. 
+                        </p>
+                        <!-- <button class="preview__item-info unbutton">+ Info</button> -->
+                        <!-- <button class="preview__item-button">ΠΕΡΙΣΣΟΤΕΡΑ</button> -->
+                        <a href="/Subcategory - Landing Page/απαρχες/aπαρχές.html" class="preview__item-button">Περισσότερα</a>
+                    </div>
+                </div>
+                <div class="preview__item" id="preview-6">
+                    <button class="preview__item-back unbutton"><span>Back</span></button>
+                    <div class="preview__item-imgwrap">
+                        <div class="preview__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </div>
+                    <h2 data-splitting="" class="preview__item-title">ΒΙΒΛΙΟΓΡΑΦΙΑ</h2>
+                    <div class="preview__item-content">
+                        <!-- <div class="preview__item-meta"><span>Berlin, Germany</span><span>21/08/2025</span></div> -->
+                        <p class="preview__item-description">Αλεξάνδρή, Ο. (Επιμ.), (1989). Το Πνεύμα και το Σώμα. Οι αθλητικοί αγώνες στην Αρχαία Ελλάδα, Αθήνα:  ΥΠΠΟ –Ελληνικό Τμήμα ICOM.
+                        </p>
+                        <p class="preview__item-description">Βαλαβάνης, Π. (2004/2017). Ιερά και αγώνες στην αρχαία Ελλάδα, Αθήνα: Εκδόσεις Καπόν.
+                        </p>
+                        <p class="preview__item-description">Ιστορία του Ελληνικού Έθνους, (1971), τόμος Β’, σσ. 472-507, Αθήνα: Εκδοτική Αθηνών.
+                        </p>
+                        <p class="preview__item-description">Καλτσάς, Ν. (Επιμ.). (2004). Αγών, κατάλογος έκθεσης, Αθήνα: Υπουργείο Πολιτισμού - Εθνικό Αρχαιολογικό Μουσείο.
+                        </p>
+                        <p class="preview__item-description">Measham, T., Spathari, E., & Donnelly P., (2000). 1000 years of the Olympic Games. Treasures of Ancient Greece, κατάλογος έκθεσης, Sydney: Powerhouse Museum Publishing.
+                        </p>
+                        <p class="preview__item-description">Ολυμπία. Μια διαδρομή σε τέσσερις διαστάσεις, (2004). Αθήνα: Ίδρυμα Μείζονος Ελληνισμού.
+                            <br>
+                            English edition: Olympia. A journey in four dimensions, (2004). Athens: Foundation of the Hellenic World.
+                        </p>
+                        <p class="preview__item-description">Παλαιολόγος, Κ. (2004). Ολυμπία. Μια ξενάγηση στο μύθο και στην ιστορία της, Αθήνα: Εκδόσεις Άγκυρα.
+                        </p>
+                        <p class="preview__item-description">Σπαθάρη, Έ. (2000). Το Ολυμπιακό Πνεύμα. Από τη γέννηση μέχρι την αναβίωσή του. Αθήνα: Εκδόσεις Αδάμ.
+                        </p>
+                        <p class="preview__item-description">Φωτεινός, Σπ. (1989). Ολυμπία. Οδηγός Αρχαιοτήτων, Αθήνα: Ολυμπιακές Εκδόσεις.
+                        </p>
+                        <p class="preview__item-description">Χρόνης, Μ. (2003). Ολυμπιακοί Αγώνες. 28 αιώνες Ιστορία-Αθλητισμός-Πολιτισμός, Αθήνα: Ειδικές Εκδόσεις Λαμπρόπουλος.
+                            <br>
+                            English edition: Hronis, M. (2003), Olympic Games. 28 centuries History-Athletics-Civilization, Athens: Lambropoulos Special Publications.
+                        </p>
+                        <p class="preview__item-description">Yalouris, N. (Ed.), (1976). Athletics in Ancient Greece. Ancient Olympia and the Olympic Games, Athens: Ekdotike Athinon S.A. 
+                        </p>
+                        <p class="preview__item-description">Βιβλιογραφία για την αρχαία ελληνική τεχνολογία σε σχέση με τον αθλητισμό:
+                        </p>
+                        <p class="preview__item-description">Αρχαία Ελληνική Τεχνολογία, Κατάλογος έκθεσης, (1997). Θεσσαλονίκη Πολιτιστική Πρωτεύουσα.
+                        </p>
+                        <p class="preview__item-description">Βαλαβάνης, Π. (2005). Ύσπληξ: Ο μηχανισμός άφεσης στα αρχαία στάδια,  Αρχαιολογία και Τέχνες, 94, Ιούνιος 2005, σσ. 68-73.
+                        </p>
+                        <!--<a href="/subcategory%20-%20landing%20page/Απαρχές/aπαρχές.html" class="preview__item-button">Περισσότερα</a>-->
+                    </div>
+                </div>
+                <div class="preview__item" id="preview-7">
+                    <button class="preview__item-back unbutton"><span>Back</span></button>
+                    <div class="preview__item-imgwrap">
+                        <div class="preview__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </div>
+                    <h2 data-splitting="" class="preview__item-title">ΙΔΕΩΔΗ</h2>
+                    <div class="preview__item-content">
+                        <div class="preview__item-meta" style="font-weight: bold;"> Ολυμπιακά ιδεώδη</div>
+                        <!-- <div class="preview__item-meta"><span>Madrid, Spain</span><span>18/010/2025</span></div> -->
+                        <p class="preview__item-description">Αν η λάμψη των ολυμπιακών αγώνων φτάνει ως τις μέρες μας, αυτό οφείλεται στα ιδανικά που τους διέπουν, υψώνοντάς τους πάνω από το στενό πλαίσιο του αθλητικού διαγωνισμού.</p>
+                        <!-- <button class="preview__item-info unbutton">+ Info</button> -->
+                        <!-- <button class="preview__item-button">ΠΕΡΙΣΣΟΤΕΡΑ</button> -->
+                        <a href="/Subcategory - Landing Page/απαρχες/aπαρχές.html" class="preview__item-button">Περισσότερα</a>
+                    </div>
+                </div>
+                <div class="preview__item" id="preview-8">
+                    <button class="preview__item-back unbutton"><span>Back</span></button>
+                    <div class="preview__item-imgwrap">
+                        <div class="preview__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </div>
+                    <h2 data-splitting="" class="preview__item-title">ΕΠΑΘΛΑ</h2>
+                    <div class="preview__item-content">
+                        <div class="preview__item-meta" style="font-weight: bold;">  Τιμές στους νικητές</div>
+                        <!-- <div class="preview__item-meta"><span>Berlin, Germany</span><span>03/09/2025</span></div> -->
+                        <p class="preview__item-description">  Οι πανελλήνιοι αγώνες ήταν αγώνες στεφανίτες, πρόσφεραν δηλαδή ως έπαθλο στεφάνι από κλαδιά δέντρων ή φυτών. Στην Ολυμπία, το βραβείο ήταν ο κότινος, στεφάνι από την αγριελιά που φύτρωνε πλάι στον ναό του Δία. Αντίστοιχα, στα Πύθια έπλεκαν το στεφάνι της νίκης από κλαδιά δάφνης, στα Ίσθμια πεύκου και στα Νέμεα από κλώνους άγριου σέλινου, φυτά που σχετίζονταν με τον τιμώμενο θεό στο κάθε ιερό και τους μύθους για την ίδρυση των αγώνων.
+                        </p>
+                        <p class="preview__item-description">Αντίθετα, οι τοπικοί αγώνες ήταν χρηματίτες, προσέφεραν δηλαδή πλούσια βραβεία ώστε να προσελκύουν πολυάριθμους φημισμένους αθλητές. Στα ομηρικά έπη λέβητες και τρίποδες, μετάλλινα σκεύη μεγάλης αξίας, ήταν η ανταμοιβή για τους νικητές, ενώ στους ιστορικούς χρόνους γνωστό παράδειγμα αποτελούν οι παναθηναϊκοί αμφορείς γεμάτοι με το εξαίρετο λάδι της αττικής γης.
+                        </p>
+                        <p class="preview__item-description">Στους ολυμπιακούς αγώνες της αρχαιότητας μόνο ο πρώτος σε κάθε αγώνισμα κέρδιζε τον κότινο της νίκης. Με το τέλος του αγώνα ο νικητής, στεφανωμένος με κόκκινη κορδέλα και κρατώντας ένα κλαδί φοίνικα, έκανε το γύρο του σταδίου ανάμεσα στις επευφημίες των θεατών. Η απονομή του κότινου γινόταν πιθανότητα την τελευταία ημέρα των αγώνων μπροστά στον ναό του Δία, για όλους μαζί τους νικητές.
+                        </p>
+                        <p class="preview__item-description">Η νίκη θεωρούνταν σημαντικό κατόρθωμα, εύνοια των θεών, δόξα για τον αθλητή αλλά και για την πατρίδα του, κι έτσι η κάθε πόλη θέσπιζε προνόμια και τιμές για όσους διέπρεπαν στους αγώνες. Η φήμη τους διαδίδονταν σε όλο τον ελληνικό κόσμο, ποιητές υμνούσαν τα κατορθώματά τους και γλύπτες φιλοτεχνούσαν αγάλματα με τη μορφή τους, ώστε το όνομά τους να μείνει αθάνατο στους αιώνες.
+                        </p>
+                        <!-- <button class="preview__item-info unbutton">+ Info</button> -->
+                        <!-- <button class="preview__item-button">ΠΕΡΙΣΣΟΤΕΡΑ</button> -->
+                        <a href="/Subcategory - Landing Page/επαθλα/epathla.html" class="preview__item-button">Περισσότερα</a>
+                    </div>
+                </div>
+                <div class="preview__item" id="preview-9">
+                    <button class="preview__item-back unbutton"><span>Back</span></button>
+                    <div class="preview__item-imgwrap">
+                        <div class="preview__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </div>
+                    <h2 data-splitting="" class="preview__item-title">ΓΛΩΣΣΑΡΙ</h2>
+                    <div class="preview__item-content">
+                        <div class="preview__item-meta" style="font-weight: bold;">Λεξιλόγιο</div>
+                        <!-- <div class="preview__item-meta"><span>London, United Kingdom</span><span>16/01/2025</span></div> -->
+                        <p class="preview__item-description">    Αγώνας: Η λέξη αγών συγγενεύει με τη λέξη αγορά, δηλαδή τη συγκέντρωση και συνάθροιση για την παρακολούθηση αθλητικών δραστηριοτήτων, αλλά και με την αγωνία, την άμιλλα, την προσπάθεια για τη νίκη. Αξίζει να σημειωθεί ότι μόνο στην ελληνική γλώσσα χρησιμοποιείται η λέξη αυτή με την πολυσημία της όταν αναφερόμαστε στις αθλητικές διοργανώσεις  – στις άλλες γλώσσες ο ανάλογος όρος είναι παιχνίδια (games, jeux, spiele, giochi, κτλ.).</p>
+                        <!-- <button class="preview__item-info unbutton">+ Info</button> -->
+                        <!-- <button class="preview__item-button">ΠΕΡΙΣΣΟΤΕΡΑ</button> -->
+                        <a href="/Subcategory - Landing Page/απαρχες/aπαρχές.html" class="preview__item-button">Περισσότερα</a>
+                    </div>
+                </div>
+                <div class="preview__item" id="preview-10">
+                    <button class="preview__item-back unbutton"><span>Back</span></button>
+                    <div class="preview__item-imgwrap">
+                        <div class="preview__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </div>
+                    <h2 data-splitting="" class="preview__item-title">ΣΥΝΤΑΚΤΕΣ</h2>
+                    <div class="preview__item-content">
+                        <div class="preview__item-meta" style="font-weight: bold;">Συντάκτες</div>
+                        <!-- <div class="preview__item-meta"><span>Vienna, Austria</span><span>12/03/2025</span></div> -->
+                        <p class="preview__item-description"></p>
+                        <!-- <button class="preview__item-info unbutton">+ Info</button> -->
+                        <!-- <button class="preview__item-button">ΠΕΡΙΣΣΟΤΕΡΑ</button> -->
+                        <a href="/Subcategory - Landing Page/απαρχες/aπαρχές.html" class="preview__item-button">Περισσότερα</a>
+                    </div>
+                </div>
+                <div class="preview__item" id="preview-11">
+                    <button class="preview__item-back unbutton"><span>Back</span></button>
+                    <div class="preview__item-imgwrap">
+                        <div class="preview__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </div>
+                    <h2 data-splitting="" class="preview__item-title">ΠΗΓΕΣ</h2>
+                    <div class="preview__item-content">
+                        <div class="preview__item-meta" style="font-weight: bold;">Οι Ουμπιακοί Αγώνες</div>
+                        <!-- <div class="preview__item-meta"><span>Berlin, Germany</span><span>22/08/2025</span></div> -->
+                        <p class="preview__item-description">  Ο Πίνδαρος από τη Θήβα (5ος αι. π.Χ.) έγραψε πολυάριθμα ποίηματα υμνώντας σπουδαίους αθλητές που διακρίθηκαν στους Πανελλήνιους Αγώνες. Οι στίχοι του δείχνουν με τρόπο λυρικό τη σημασία των Ολυμπιακών Αγώνων για τους αρχαίους Έλληνες.</p>
+                        <!-- <button class="preview__item-info unbutton">+ Info</button> -->
+                        <!-- <button class="preview__item-button">ΠΕΡΙΣΣΟΤΕΡΑ</button> -->
+                        <a href="/Subcategory - Landing Page/απαρχες/aπαρχές.html" class="preview__item-button">Περισσότερα</a>
+                    </div>
+                </div>
+                <div class="preview__item" id="preview-12">
+                    <button class="preview__item-back unbutton"><span>Back</span></button>
+                    <div class="preview__item-imgwrap">
+                        <div class="preview__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </div>
+                    <h2 data-splitting="" class="preview__item-title">Twinhouse</h2>
+                    <div class="preview__item-content">
+                        <div class="preview__item-meta" style="font-weight: bold;">asdasdasd</div>
+                        <!-- <div class="preview__item-meta"><span>Berlin, Germany</span><span>29/07/2025</span></div> -->
+                        <p class="preview__item-description">Collywobbles completely starkers 221B Baker Street terribly round our gaff Shakespeare a tad, driving a mini have a gander could be a bit of a git nose rag. Cornish pasty old girl up the duff ey up every.</p>
+                        <!-- <button class="preview__item-info unbutton">+ Info</button> -->
+                        <!-- <button class="preview__item-button">ΠΕΡΙΣΣΟΤΕΡΑ</button> -->
+                        <a href="/Subcategory - Landing Page/απαρχες/aπαρχές.html" class="preview__item-button">Περισσότερα</a>
+                    </div>
+                </div>
+                <div class="preview__item" id="preview-13">
+                    <button class="preview__item-back unbutton"><span>Back</span></button>
+                    <div class="preview__item-imgwrap">
+                        <div class="preview__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </div>
+                    <h2 data-splitting="" class="preview__item-title">Lonstrian</h2>
+                    <div class="preview__item-content">
+                        <div class="preview__item-meta" style="font-weight: bold;">asdasdasd</div>
+                        <!-- <div class="preview__item-meta"><span>Sydney, Australia</span><span>19/07/2025</span></div> -->
+                        <p class="preview__item-description">Bit of a div I could reet fancy a knows bugger all about nowt easy peasy two weeks on't trot Shakespeare cockney blummin', corgi you mean it ain't me noggin' alright duck stew and dumps.</p>
+                        <!-- <button class="preview__item-info unbutton">+ Info</button> -->
+                        <!-- <button class="preview__item-button">ΠΕΡΙΣΣΟΤΕΡΑ</button> -->
+                        <a href="/Subcategory - Landing Page/απαρχες/aπαρχές.html" class="preview__item-button">Περισσότερα</a>
+                    </div>
+                </div>
+                <div class="preview__item" id="preview-14">
+                    <button class="preview__item-back unbutton"><span>Back</span></button>
+                    <div class="preview__item-imgwrap">
+                        <div class="preview__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </div>
+                    <h2 data-splitting="" class="preview__item-title">ΙΣΤΟΡΙΕΣ</h2>
+                    <div class="preview__item-content">
+                        <div class="preview__item-meta" style="font-weight: bold;">Κόροιβος ο Ηλείος, 8ος αι. π.Χ., δρόμος</div>
+                        <!-- <div class="preview__item-meta"><span>Paris, France</span><span>22/06/2025</span></div> -->
+                        <p class="preview__item-description">Σύμφωνα με την παράδοση, στους πρώτους ολυμπιακούς αγώνες του 776 π.Χ. κέρδισε τον αγώνα δρόμου του ενός σταδίου, μοναδικού αγωνίσματος  την εποχή εκείνη. Ήταν από την Ήλιδα, τη διοργανώτρια πόλη των αγώνων, και μάγειρος στο επάγγελμα, δηλαδή θυσιαστής ιερών σφαγίων.</p>
+                        <!-- <button class="preview__item-info unbutton">+ Info</button> -->
+                        <!-- <button class="preview__item-button">ΠΕΡΙΣΣΟΤΕΡΑ</button> -->
+                        <a href="/Subcategory - Landing Page/απαρχες/aπαρχές.html" class="preview__item-button">Περισσότερα</a>
+                    </div>
+                </div>
+                <div class="preview__item" id="preview-15">
+                    <button class="preview__item-back unbutton"><span>Back</span></button>
+                    <div class="preview__item-imgwrap">
+                        <div class="preview__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </div>
+                    <h2 data-splitting="" class="preview__item-title">ΜΥΘΟΛΟΓΙΑ</h2>
+                    <div class="preview__item-content">
+                        <div class="preview__item-meta" style="font-weight: bold;">Στην αχλή των μύθων: Η γέννηση των ολυμπιακών αγώνων</div>
+                        <!-- <div class="preview__item-meta"><span>Belgrade, Serbia</span><span>04/11/2025</span></div> -->
+                        <p class="preview__item-description">Οι πολλές μυθολογικές εκδοχές, στις οποίες διακλαδίζεται η γέννηση των αγώνων, είτε ανάγονται στην αρχαία ελληνική θρησκεία, η οποία τους προσδίδει κύρος, είτε αντικατοπτρίζουν ιστορικές αλλαγές στην ευρύτερη περιοχή της Ολυμπίας. Οι γειτονικές πόλεις-κράτη της Ήλιδας και της Πίσας, ανταγωνιζόμενες για τον έλεγχο του ιερού της Ολυμπίας και την οικειοποίηση της απαρχής του μεγαλειώδους αυτού αθλητικού γεγονότος με τις θρησκευτικές, πολιτικές και οικονομικές προεκτάσεις του, υιοθετούσαν ανάλογες μυθικές παραδόσεις και θεϊκούς ή ηρωικούς προστάτες των αγώνων.
+                        </p>
+                        <p class="preview__item-description">Οι πλούσιες μυθολογικές αναφορές συνθέτουν ένα γοητευτικό υπόβαθρο για τον ιερό χώρο της Ολυμπίας και την σωματική και πνευματική υπεροχή που προήγαγε και αποκαλύπτουν τη σημασία που του αποδιδόταν σε τοπική και πανελλήνια κλίμακα.
+                        </p>
+                        <p class="preview__item-description">Σημαντικοί θεϊκοί ή ηρωικοί προστάτες των Ολυμπιακών Αγώνων ήταν οι:
+                            <br><br>
+                            • Δίας <br>
+                            • Ηρακλής <br>
+                            • Πέλοψ <br>
+                        </p>
+                        <p class="preview__item-description">Ο υπέρτατος θεός-προστάτης 
+                            <br> <span style="font-weight: bold;">Δίας</span> 
+                            <br><br>
+                            Ο Δίας, ανώτατος θεός του ολυμπιακού πανθέου, ήταν γιος του Κρόνου, ο οποίος κατάπινε τα νεογέννητα παιδιά του για να μην του πάρουν την εξουσία. Ο Δίας αντιτάχθηκε στον πατέρα του, τον οποίο νίκησε σε αγώνα πάλης στην Ολυμπία. Καθιέρωσε με αυτόν τον τρόπο τους Ολυμπιακούς Αγώνες. Από τους κλασικούς χρόνους, ο ναός του δέσποζε στην Άλτη.
+                        </p>
+                        <p class="preview__item-description">Ο ημίθεος των άθλων
+                            <br> <span style="font-weight: bold;">Ηρακλής Θηβαίος</span> 
+                            <br><br>
+                            Ο Ηρακλής, γιος του θεού Δία και φημισμένος για τους 12 άθλους του, εγκαινίασε τους Αγώνες στην Ολυμπία, προς τιμή του πατέρα του, και βγήκε νικητής σε όλα τα αγωνίσματα. Έφερε την αγριελιά στην Ολυμπία από τη χώρα των Υπερβορείων, ενώ καθόρισε και τα όρια της Άλτεως, του ιερού χώρου λατρείας του Δία. Οι άθλοι του απεικονίστηκαν στις μετόπες του ναού του Δία στην Ολυμπία και ο ίδιος αναδείχθηκε σε σύμβολο του αθλητικού ιδεώδους.
+                        </p>
+                        <p class="preview__item-description">Ο «παραστάτης»
+                            <br> <span style="font-weight: bold;">Ηρακλής Ιδαίος</span> 
+                            <br><br>
+                            Ο Ιδαίος Ηρακλής, από το όρος Ίδη της Κρήτης -συνονόματος του Ηρακλή των άθλων- οργάνωσε αγώνες δρόμου στην Ολυμπία (Ολύμπια) με τους αδελφούς του Δακτύλους (ή Κουρήτες), θεότητες που είχαν προστατεύσει τον Δία από τον Κρόνο. Επίσης, ως έπαθλο για τον νικητή καθιέρωσε ένα στεφάνι αγριελιάς και όρισε το μήκος του σταδίου. Δεν είναι λοιπόν τυχαίο που οι αθλητές τον επικαλούνταν ως βοηθό (παραστάτη).
+                        </p>
+                        <p class="preview__item-description">Ο ιδρυτής ήρωας
+                            <br> <span style="font-weight: bold;">Πέλοψ</span> 
+                            <br><br>
+                            Ο Πέλοπας νίκησε στην αρματοδρομία τον Οινόμαο, βασιλιά της Πίσας, και πήρε ως σύζυγό του την κόρη του Ιπποδάμεια. Ίδρυσε τους Αγώνες προκειμένου να εξιλεωθεί για τον θάνατο του Οινομάου. Ο αγώνας τους αποτυπώθηκε στο ανατολικό αέτωμα του ναού του Δία στην Ολυμπία.
+                        </p>
+                        <a href="/Subcategory - Landing Page/μυθολογια/mythologia.html" class="preview__item-button">Περισσότερα</a>
+                    </div>
+                </div>
+                <div class="preview__item" id="preview-16">
+                    <button class="preview__item-back unbutton"><span>Back</span></button>
+                    <div class="preview__item-imgwrap">
+                        <div class="preview__item-img" style="background-image:url(home/dummy.jpg)"></div>
+                    </div>
+                    <h2 data-splitting="" class="preview__item-title">ΧΡΟΝΟΛΟΓΙΟ</h2>
+                    <div class="preview__item-content">
+                        <div class="preview__item-meta" style="font-weight: bold;"> Χρονολόγιο Ολυμπιακών Αγώνων</div>
+                        <!-- <div class="preview__item-meta"><span>Moscow, Russia</span><span>10/08/2025</span></div> -->
+                        <p class="preview__item-description">  Αιέν αριστεύειν και υπείροχον εμμεναι άλλων - προτροπή του Πηλέα στον Αχιλλέα.</p>
+                        <!-- <button class="preview__item-info unbutton">+ Info</button> -->
+                        <!-- <button class="preview__item-button">ΠΕΡΙΣΣΟΤΕΡΑ</button> -->
+                        <a href="/Subcategory - Landing Page/απαρχες/aπαρχές.html" class="preview__item-button">Περισσότερα</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cursor">
+            <svg class="cursor__svg" width="80" height="80">
+                <circle vector-effect="non-scaling-stroke" class="cursor__svg-circle" cx="40" cy="40" r="20" />
+                </svg> <span class="cursor__text"></span> </div>
+                <script src="home/index.cad48f07.js"></script>
+            </body>
+        </html>
