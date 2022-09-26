@@ -35,11 +35,16 @@ body {
 }
 
 /* ------------- */
-.preview__item-content {
+/*.preview__item-content {
     overflow: hidden;
     overflow-y: scroll;
+}*/
+.preview__item-content .main_preview__item {
+    overflow: hidden;
+    overflow-y: scroll;
+    max-height: 290px;
+    margin-bottom: 40px;
 }
-
 /*.preview__item-description-02 {
   width: 220%;
   margin-top: 12vh;
