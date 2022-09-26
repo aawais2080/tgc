@@ -785,6 +785,7 @@ main {
 	height: 480vh;
 	width: 100%;
 	background-color: rgb(0, 0, 0);
+	z-index: 9;
 }
 
 .extra-button {
